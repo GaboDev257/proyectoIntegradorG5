@@ -28,7 +28,7 @@ Juan Ignacio Ordoñez. 26 años. Estudió Licenciatura en Economía Empresarial 
 
 Federico Fabre. 27 años. Trabaja en Comercio Familiar en la Ciudad de la Plata, Provincia de Buenos Aires
 
-Gabriel Aguirre Nossa. 
+Gabriel Aguirre Nossa. 33 años. Topógrafo de la Universidad Distrital Francisco José de Caldas, trabaja como Desarrollador Jr en una empresa de tecnología. Bogotá Colombia.
 
 Gaston Dominguez 23 años. Trabajo en la parte contable de una empresa de alimentos.
 
