@@ -30,7 +30,7 @@ Federico Fabre. 27 años. Trabaja en Comercio Familiar en la Ciudad de la Plata,
 
 Gabriel Aguirre Nossa. 
 
-Gaston Dominguez.
+Gaston Dominguez 23 años. Trabajo en la parte contable de una empresa de alimentos.
 
 
 Link del tablero de trabajo del grupo:
