@@ -17,7 +17,7 @@ https://www.dylanscandybar.com/
 https://www.candyclub.com/
 https://harrypottershop.co.uk/
 https://www.wizardstore.com.ar/
-*https://magiayhechiceria.com/sortilegios-weasley/
+
 
 
 Integrantes del grupo de trabajo:
@@ -36,6 +36,7 @@ Gaston Dominguez.
 Link del tablero de trabajo del grupo:
 
 https://app.clickup.com/31529640/v/l/s/55502854
+https://trello.com/b/SwvGuCRE/grupo-5-digital-house
 
 
 
