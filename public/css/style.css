@@ -1,0 +1,23 @@
+
+
+.producto1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+}
+
+
+.producto2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+}
+
+#botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
