@@ -1,23 +1,49 @@
 
-
-.producto1 {
+.divA{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    gap:100px;
+    padding: 50px; 
+}
+
+
+.imagen1{display: flex;
+    flex-direction: column;
     
+}
+
+
+.div1{
+    display: flex;
+    flex-direction: column;
 
 }
 
 
-.producto2 {
+.divB{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-   
+    gap:100px;
+    padding: 50px;
+    
 }
+
+.imagen2{display: flex;
+    flex-direction: column;
+    
+}
+
+
+.div2{
+    display: flex;
+    flex-direction: column;
+}
+
 
 #botones {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
+
+
