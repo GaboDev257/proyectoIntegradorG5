@@ -1,0 +1,53 @@
+main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+titulo { display: flex;
+ 
+    
+
+}
+
+h1 {
+    color: #FF6565
+}
+
+.divizq { 
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    gap: 10px 20px; 
+    
+
+}
+
+.divchevron {
+    display: block;
+    color: #FF6565;
+    font-size: 40px
+    
+    
+}
+
+.p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 30px
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    Margin: auto
+    
+}

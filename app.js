@@ -23,5 +23,7 @@ app.get('/shoppingCart', (req, res) => (
     res.sendFile(path.resolve(__dirname, './views/shoppingCart/shoppingCart.html'))
 ));
 
-
+app.get('/productdescription', (req, res) => (
+    res.sendFile(path.resolve(__dirname, './views/shoppingCart/ProductDescription/productDescription.html'))
+));
 
