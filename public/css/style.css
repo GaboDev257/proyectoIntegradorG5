@@ -1,6 +1,24 @@
-.w100 {
+.imgIzquierda {
     width: 100%;
+    margin-top: 40px;
 }
+
+.logo {
+    width: 100%;
+    margin-top: 9px
+}
+
+.w100google {
+    width: 100%
+}
+
 .color-boton-verde {
-    background-color: green;
+    background-color: #FF6565;
 }
+
+.container_section{
+    height: 850px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
