@@ -8,10 +8,6 @@
     margin-top: 9px
 }
 
-.w100google {
-    width: 100%
-}
-
 .color-boton-verde {
     background-color: #FF6565;
 }
@@ -22,3 +18,16 @@
     overflow: hidden;
 }
 
+.crearcuenta1 {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.fz15 {
+    font-size: 15px;
+}
+
+.mt15 {
+    margin-top: 15px
+}
