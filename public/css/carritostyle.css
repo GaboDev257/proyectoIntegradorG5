@@ -152,6 +152,7 @@
 
 .total{
     display: flex;
+    color: #940606;
     flex-direction: row;
     margin-left: 432px;
     height: 50px;
