@@ -4,7 +4,8 @@
   "description": "Repositorio del proyecto integrador de Digital House, correspondiente al grupo 5.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
   },
   "homepage": "https://github.com/juaniordonez/proyectointegradorgrupo5#readme",
   "dependencies": {
-    "bootstrap": "^5.2.1",
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.1",
     "express": "^4.18.1"
   },
   "keywords": []
