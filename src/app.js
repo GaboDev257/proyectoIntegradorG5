@@ -6,13 +6,11 @@ const path = require('path');
 
 const app = express();
 
-const publicPath = path.resolve(__dirname, './public');
-
-app.use(express.static(path.resolve(__dirname, '../public')));
-
+const publicPath = path.resolve(__dirname, '../public');
+app.use(express.static(publicPath))
 
 app.use('/shoppingCart', carritoRoutes);
- 
+
 
 app.use('/', (req, res) => (
     res.sendFile(path.resolve(__dirname, './views/home.html'))
@@ -25,6 +23,7 @@ app.use('/login', (req, res) => (
 app.use('/register', (req, res) => (
     res.sendFile(path.resolve(__dirname, './views/register/register.html'))
 ));
+
 
 
 
