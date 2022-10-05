@@ -1,4 +1,8 @@
+
+const homeRoutes = require('./routes/homeRoutes.js');
+
 const carritoRoutes = require ('./routes/carritoRoutes');
+
 
 const express = require('express');
 const { dirname } = require('path');
@@ -7,9 +11,15 @@ const path = require('path');
 const app = express();
 
 const publicPath = path.resolve(__dirname, '../public');
-app.use(express.static(publicPath))
+app.use(express.static(publicPath));
+
+
+
 
 app.use('/shoppingCart', carritoRoutes);
+
+
+app.use('/', homeRoutes); 
 
 
 app.use('/', (req, res) => (
@@ -18,6 +28,7 @@ app.use('/', (req, res) => (
 
 
 app.use('/login', (req, res) => (
+
     res.sendFile(path.resolve(__dirname, './views/login/login.html'))
 ));
 app.use('/register', (req, res) => (
