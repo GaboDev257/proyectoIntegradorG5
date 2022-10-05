@@ -1,5 +1,5 @@
 const usuariosRoutes = require ('./routes/usuariosRoutes')
-const productosRoutes = require ('./routes/productosRoutes')
+
 
 const express = require('express');
 const path = require('path');
@@ -14,7 +14,7 @@ app.listen(3000, () => (
 ));
 
 app.use('/users', usuariosRoutes)
-app.use('/products', productosRoutes)
+
 
 /*
 app.get('/', (req, res) => (
