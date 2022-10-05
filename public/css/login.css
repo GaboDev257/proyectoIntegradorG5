@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+.contenedor-padre{
+    display: flex;
+    max-width: 90%;
+}
+.contenedor-img{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100vh;
+   
+}
+.contenedor-img img{
+    width:  450px;
+    height: 100vh;
+    padding-left: 30px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    
+    
+  
+}
+.contenedor-derecho{
+    width: 50%;
+    height: 100vh;
+}
+
+.contenedor-logo{
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+   
+
+}
+.contenedor-logo img{
+   padding: 10px;
+}
+
+.contenedor-form{
+   
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+
+}
+
+.contenedor-form form{
+    width: 350px;
+    height: 250px;
+    margin-top: 20px;
+    padding: 0;
+}
+.contenedor-recordarme{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor-recordarme span{
+    color:rgb(209, 209, 14);
+    font-weight:bold;
+    font-size: 18px;
+    
+}
+#boton-ingresar{
+    width: 100%;
+}
+
+.btn-ingresar{
+    background-color: rgba(235, 25, 25, 0.836);
+    border: 1px solid black;
+  
+}
+.btn-google{
+    border: 1px solid black;
+}
+h5{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.p-registro{
+    margin-top: 15px;
+    text-align: center;
+}
+.p-registro strong{
+    color:rgba(235, 25, 25, 0.836);
+}
