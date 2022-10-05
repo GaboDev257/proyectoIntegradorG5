@@ -1,6 +1,6 @@
 const usuariosRoutes = require ('./routes/usuariosRoutes')
 const productosRoutes = require ('./routes/productosRoutes')
-const homeRoutes = require('./routes/homeRoutes.js');
+const homeRoutes = require('./routes/homeRoutes');
 const carritoRoutes = require ('./routes/carritoRoutes');
 
 
@@ -12,11 +12,14 @@ const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 
+app.use('/', homeRoutes); 
 app.use('/users', usuariosRoutes);
 app.use('/products', productosRoutes);
 app.use('/shoppingCart', carritoRoutes);
-app.use('/', homeRoutes); 
+
 
 
 app.listen(3000, () => (
