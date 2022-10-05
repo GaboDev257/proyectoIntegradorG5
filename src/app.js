@@ -1,16 +1,18 @@
-
+const usuariosRoutes = require ('./routes/usuariosRoutes')
 
 const express = require('express');
 const path = require('path');
 
 const app = express();
 
-const publicPath = path.resolve(__dirname, './public');
+const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
 app.listen(3000, () => (
     console.log('Servidor lanzado en puerto 3000')
 ));
+
+app.use('/users', usuariosRoutes)
 
 
 /*
@@ -29,5 +31,5 @@ app.get('/shoppingCart', (req, res) => (
 app.get('/ProductDescription', (req, res) => (
     res.sendFile(path.resolve(__dirname, './views/ProductDescription/productDescription.html'))
 ));
-/*
+*/
 
