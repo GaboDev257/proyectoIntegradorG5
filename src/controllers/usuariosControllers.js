@@ -2,10 +2,10 @@ const path = require('path');
 
 const controlador = {
     register: (req,res) => {
-        res.sendFile(path.resolve(__dirname, '../views/register/register.html'))
+        res.sendFile(path.resolve(__dirname, '../views/register.html'))
     },
     login: (req, res) => {
-        res.sendFile(path.resolve(__dirname, '../views/login/login.html'))
+        res.sendFile(path.resolve(__dirname, '../views/login.html'))
     }
     
 }
