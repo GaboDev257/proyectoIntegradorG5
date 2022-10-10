@@ -15,12 +15,6 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-<<<<<<< HEAD
-app.use('/users', usuariosRoutes)
-app.use('/products', productosRoutes)
-app.use('/shoppingCart', carritoRoutes);
-=======
->>>>>>> 65c0119b8b8b9073c5bf4170a71438e08d98d09f
 app.use('/', homeRoutes); 
 app.use('/users', usuariosRoutes);
 app.use('/products', productosRoutes);
