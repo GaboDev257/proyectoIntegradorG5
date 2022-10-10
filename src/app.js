@@ -18,7 +18,6 @@ app.use(express.static(publicPath));
 
 app.use('/users', usuariosRoutes)
 app.use('/products', productosRoutes)
-=======
 app.use('/shoppingCart', carritoRoutes);
 app.use('/', homeRoutes); 
 
