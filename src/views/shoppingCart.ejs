@@ -9,36 +9,7 @@
 
 <body>
   <!-- Header -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light shadow p-2 mb-3 rounded" id="topnavbar">
-      <div class="container-fluid ">
-        <a class="navbar-brand" href="/"><img class="img-fluid" width="95" height="95" src="/img/company-logo.png" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/" id="link-text">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./users/login" id="link-text">login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./users/register" id="link-text">Sign in</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Busca un producto" id="input-suscr" aria-label="Search" />
-          <button class= "btn btn-outline-success" type="submit" id="btn-standard">Buscar</button>
-        </form>
-        <div id="icon-container">
-          <i class="bi bi-cart-fill"></i>
-        </div>
-      </div>
-    </div>
-  </nav>
-  </header>
+  <%- include('partials/topNavbar.ejs') %>
 
 <div id="titulo"><h3 class="titulo1"> Mi carrito </h3></div>
 
@@ -110,32 +81,7 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="w-100 py-4 flex-shrink-0" id="footer">
-  <div class="container px-4">
-      <div class="row gy-6 gx-7 d-flex align-items-center">
-          <div class="col-lg-3 col-md-6 ">
-              <a href="/"><img class="img-fluid" width="160" height="160" src="/img/company-logo.png" alt="logo"></a>
-          </div>
-          <div class="col-lg-4 col-md-6">
-              <ul class="fs-5" id="link-text">
-                  <li><a id="link-text" href="#">Contacto</a></li>
-                  <li><a id="link-text" href="#">FAQ</a></li>
-                  <li><a id="link-text" href="#">Sobre nosotros</a></li>
-                  <li><a id="link-text" href="#">Estado de mi pedido</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-4 col-md-6">
-              <h5 class="mb-3" id="text-suscr">¡Suscribite  y recibí ofertas especiales!</h5>
-              <form action="#">
-                  <div class="input-group mb-3">
-                      <input class="form-control" id="input-suscr" type="text" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-suscr">
-                      <button class="btn btn-primary" id="button-suscr" type="button"><i class="bi bi-send"></i></button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </div>
-</footer>
+<%- include('partials/footer.ejs') %>
 
 </body>
 
