@@ -1,4 +1,4 @@
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/2f4cf68282.js" crossorigin="anonymous"></script>
   </head>
   
-  <body>
+  <!-- <body>
     <main> 
     <div class="divizq"> 
       <div> 
@@ -32,4 +32,62 @@
     
     </div>
     </main>
-  </body> 
+  </body> -->
+<body>
+	<!-- Header -->
+	<%- include('partials/topNavbar') %>
+	<!-- /Header -->
+
+	<!-- product detail -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Detalle del producto: NOMBRE DEL PRODUCTO</h2>
+			</div>
+		</div>
+		<div class="product-detail">
+			<div class="row">
+				<div class="col-12 col-lg-8">
+					<img src="/images/products/<%=detalleProducto.image %>" alt="product image" class="product-detail-img">
+					<p class="product-detail-description">
+						<%=detalleProducto.description %>
+					</p>
+				</div>
+				<div class="col-12 col-lg-4">
+					<article class="product-detail-info">
+						<h2 class="product-detail-title"><%=detalleProducto.name %></h2>
+						
+							<p class="product-detail-price small">
+								<span>$<%=detalleProducto.price %></span>
+							</p>
+						<ul class="actions-list">
+							<li>
+								<i class="fas fa-credit-card"></i>
+								<p>Pagá en 12 cuotas sin interes</p>
+							</li>
+							<li>
+								<i class="fas fa-store"></i>
+								<p>Retiro gratis en locales del vendedor</p>
+							</li>
+						</ul>
+
+						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
+						<hr>
+
+						<a href="/products/edit/<%=detalleProducto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%=detalleProducto.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /product detail -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+
+</body>	
+</html>
