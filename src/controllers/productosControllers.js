@@ -1,4 +1,4 @@
-const path = require('path');
+/*const path = require('path');
 
 const controlador = {
     product: (req,res) => {
@@ -7,4 +7,4 @@ const controlador = {
     
 }
 
-module.exports = controlador
+module.exports = controlador */

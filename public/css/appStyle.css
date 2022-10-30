@@ -1,13 +1,12 @@
+/* top-navbar */
 
 #topnavbar {
     background: #FDF9C4;
     height: 100px;
 }
-
 #navbarSupportedContent{
     background: #FDF9C4;
 }
-
 #icon-container{
     color: #FF6565;
     width: 50px;
@@ -17,12 +16,10 @@
     align-items: center;
     justify-content: center;
 }
-
 #link-text{
     color: #FF6565;
     font-family: Verdana;
 }
-
 #btn-standard{
     font-family: Verdana;
     color:white;
@@ -36,23 +33,52 @@
     width: 200px;
 }
 
-#input-suscr{
-    border-color: #FF6565;
-}
+/* footer */
 
+#footer{
+    background: #FDF9C4;
+}
 #text-suscr{
     color:white;
     background-color:#FF6565
     
 }
-
+#input-suscr{
+    border-color: #FF6565;
+}
 #button-suscr{
     background: #FF6565;
     border: none;
 }
-#footer{
-    background: #FDF9C4;
+
+/* home */
+
+#section-tittle{
+    font-family: Verdana;
+    color:white;
+    background:#FF6565;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+#text-name{
+    font-family: Verdana;
+    color: #FF6565;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#price-home{
+    font-family: Verdana;
+    color: #940606;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* shopping car */
 
 .titulo1{
     display: flex;
@@ -67,22 +93,17 @@
     border-radius: 10px;
     font-weight: 400;
 }
-
 .divA{
     display: flex;
     flex-direction: row;
     gap:100px;
     padding: 50px; 
 }
-
-
 .imagen1{display: flex;
     flex-direction: column;
     margin-left: 150px; 
     
 }
-
-
 .div1{
     display: flex;
     flex-direction: column;
@@ -97,10 +118,7 @@
     border-radius: 20px;
     padding: 25px 20px 20px 50px;
     
-
 }
-
-
 .divB{
     display: flex;
     flex-direction: row;
@@ -108,14 +126,11 @@
     padding: 50px;
     
 }
-
 .imagen2{display: flex;
     flex-direction: column;
     margin-left: 150px;
  
 }
-
-
 .div2{
     display: flex;
     flex-direction: column;
@@ -131,8 +146,6 @@
     padding: 25px 20px 20px 50px;
     
 }
-
-
 #botones {
     display: flex;
     flex-direction: row;
@@ -142,12 +155,9 @@
     margin-top: 0px;
     margin-right: 100px;
 }
-
 #cantidad{
     width: 50px;
 }
-
-
 .fuente1{
     font-size: large;
     font-family: verdana;
@@ -155,7 +165,6 @@
     opacity: 100%;
     color: #FF6565;
 }
-
 .fuente2{
     font-size: medium;
     font-family: verdana;
@@ -163,21 +172,16 @@
     color: #940606;
     font-weight: 600;
 }
-
 .cant{ 
    font-size: large;
    font-weight: 400;
    font-family: verdana;
    color: #FF6565;
 }
-
 .sub{
     order: 5;
     align-self: flex-end;
-
 }
-
-
 .bot1{
     background-color: white;
     color: #FF6565;
@@ -189,23 +193,18 @@
     line-height: 1;
     padding: 10px;
     outline: none;
-
 }
-
 .bot1:hover {
     color: white;
     background-color: #FF6565;
 }
-
 .bot2{
     background-color: #FF6565;
     color: white;
     font-family: verdana;
     border-color: #FF6565;
     border-radius: 10px;
-
 }
-
 .total{
     display: flex;
     color: #940606;
@@ -224,4 +223,3 @@
     padding-top: 5px;
 
 }
-
