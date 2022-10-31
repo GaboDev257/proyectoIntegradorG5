@@ -2,7 +2,7 @@ const path = require('path');
 
 const controlador = {
     product: (req,res) => {
-        res.render('./productDescription.ejs')
+        res.render('./products/productDescription.ejs')
     },
     
 }

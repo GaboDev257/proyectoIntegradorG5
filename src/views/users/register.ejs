@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>Registro Weasleys' Wizard Wheezes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styleregister.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styleregister.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body class="container">
+
+    <%- include('../partials/header.ejs') %> 
+
 <section class="row container_section">
     <div class="col">
          <img src='/img/Registro2.jpg' alt='la imagen no esta' class="imgIzquierda img-fluid" > 
@@ -37,8 +41,13 @@
                     <label for="exampleFormControlInput4" class="form-label">Contraseña</label>
                     <input type="password" class="form-control"  placeholder="Password">
                 </div>
+                <div>
+                    <label for="exampleFormControlInput4" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control"  placeholder="Password">
+                </div>
             </form>    
         </div>
+        <br>
         <div class="col-9 mt15">
             <div>
                 <button type="button" class="btn btn-success d-grid gap-2 col-12 mx-auto color-boton-verde " type="submit">Crear Cuenta</button>
@@ -60,5 +69,8 @@
         </div>
     </div>
 </section>
+
+<%- include('../partials/footer') %>   
+
 </body>
 </html>
