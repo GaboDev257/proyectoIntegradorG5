@@ -6,6 +6,9 @@ const controlador = {
     },
     login: (req, res) => {
         res.render('./login.ejs')
+    },
+    profile: (req, res) => {
+        res.render('./profile.ejs')
     }
     
 }
