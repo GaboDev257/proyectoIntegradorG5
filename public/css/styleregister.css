@@ -1,4 +1,4 @@
-.imgIzquierda {
+/*.imgIzquierda {
     width: 100%;
     
 }
@@ -7,13 +7,13 @@
     width: 100%;
     
 }
-
+*/
 .color-boton-verde {
     background-color: #FF6565;
 }
 
 .container_section{
-    height: 850px;
+    height: auto;
     object-fit: cover;
     overflow: hidden;
 }
