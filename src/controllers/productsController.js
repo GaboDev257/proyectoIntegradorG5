@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { reset } = require('nodemon');
 const path = require('path');
 const { validationResult } = require('express-validator')
 
@@ -11,10 +10,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
 	// Show all products
 	index: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('products',{productos: products})
 	},
 
-	// Detail - Detail from one product
+	// Detail from one product
 	detail: (req, res) => {
 		
 		const idProducto = req.params.id;
@@ -26,7 +26,7 @@ const controller = {
 		res.render('productDescription',{detalleProducto: productoEncontrado});
 	},
 
-	// Create - Form to create
+	// Form to create
 	create: (req, res) => {
 		res.render('newProductForm');
 	},
@@ -35,16 +35,45 @@ const controller = {
 	store: (req, res) => {
 
 		let errors = validationResult(req);
-		res.send(errors);
-	if ( errors.isEmpty() ) {
+		console.log("errors ", errors)
+
+		if ( errors.isEmpty() ) {
+
+			idNuevo=0;
+
+		for (let s of products){
+			if (idNuevo<s.id){
+				idNuevo=s.id;
+			}
+		}
+
+		idNuevo++;
+
+		let nombreImagen = req.file.filename;
+
+
+		let productoNuevo =  {
+			id:   idNuevo,
+			name: req.body.name ,
+			price: req.body.price,
+			category: req.body.category,
+			description: req.body.description,
+			image: nombreImagen
+		};
+
+		products.push(productoNuevo);
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+
+		res.redirect('/');
+
 		
+		}
+		else{
+			res.render('product-create-form', {errors: errors.array() } ); 
+		}
 	
-		res.render('newProductForm', {errors: errors.array() } );
 		
-	}
-	else{
-		res.render('newProductForm', {errors: errors.array() } );
-	}
 	},
 
 	// Update - Form to edit
@@ -74,7 +103,6 @@ const controller = {
 
 				products[i].name = valoresNuevos.name;
 				products[i].price = valoresNuevos.price;
-				products[i].discount = valoresNuevos.discount;
 				products[i].category = valoresNuevos.category;
 				products[i].description = valoresNuevos.description;
 

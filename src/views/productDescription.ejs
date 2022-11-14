@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Include Head -->
-<%- include('partials/head', {title: 'detalleProducto.name'}) %>
-  
-  <!-- <body>
-    <main> 
-    <div class="divizq"> 
-      <div> 
-        <img src="/img/barra-Hufflepuff.jpg" alt="barra">
-        <div class="divhearth"><i class="fa-duotone fa-heart"></i></div>  
-      </div>
-       <div class="divchevron"><i class="fa-sharp fa-solid fa-chevron-right"></i>  </div> 
-    </div> 
-    <div class="divder"> <h1> Barra de chocolate con leche Hufflepuf </h1> 
-     <p> <span style="color: rgb(36, 231, 36)"> $ </span>  250 </p> 
-    <label > Cantidad: </label> <select name="select" >
-      <option value="value1"> 1</option>
-      <option value="value2" selected>2</option>
-      <option value="value3">3</option>
-      <option value="value4">4</option>
-      <option value="value5">5</option>
-    </select> 
-    <div class="p"> 
-      <p> Deliciosa barra de chocolate con leche de Hufflepuff. Este chocolate esta hecho con pedacitos de caramelo ocultos cubiertos con chocolate con leche, lo que lo convierte en el dulce pefecto para hacer que se te haga agua la boca. </p>
-    </div>
-     <div class="divbutton"> <button type="button" class="btn btn-light buttoncart">Agregar al carrito</button> </div>  
-    
-    </div>
-    </main>
-  </body> -->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Bootstrap Stylesheet -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		<!-- Bootstrap icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+		<!-- Own Stylesheet -->
+		<link rel="stylesheet" href="css/appStyle.css">
+		<!-- Font Awesome Stylesheet -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	</head>
 <body>
 	<!-- Header -->
 	<%- include('partials/topNavbar') %>
@@ -36,44 +20,35 @@
 
 	<!-- product detail -->
 	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: NOMBRE DEL PRODUCTO</h2>
-			</div>
-		</div>
 		<div class="product-detail">
 			<div class="row">
-				<div class="col-12 col-lg-8">
-					<img src="/images/products/<%=detalleProducto.image %>" alt="product image" class="product-detail-img">
-					<p class="product-detail-description">
-						<%=detalleProducto.description %>
-					</p>
+				<div class="divizq col-lg-8">
+					<div>
+						<img src="/img/products/<%=detalleProducto.image %>" alt="product image" class="img-fluid" width="300" height="300">
+				    	<div class="divhearth"><i class="fa-duotone fa-heart"></i></div>
+					</div> 
+					<div class="divchevron"><i class="fa-sharp fa-solid fa-chevron-right"></i>  </div> 
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%=detalleProducto.name %></h2>
-						
+						<h6 class="product-detail-tittle"><%=detalleProducto.name %></h6>
 							<p class="product-detail-price small">
-								<span>$<%=detalleProducto.price %></span>
+								<span>$ <%=detalleProducto.price %></span>
 							</p>
-						<ul class="actions-list">
-							<li>
-								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
-							</li>
-							<li>
-								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
-							</li>
-						</ul>
-
-						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-
-						<a href="/products/edit/<%=detalleProducto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/<%=detalleProducto.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
+						<div class="text-left">
+							<p class="product-detail-description">
+								<%=detalleProducto.description %>
+							</p>
+						</div>	
+						<div class="divbutton">
+							<button type="button" class="btn btn-light buttoncart">Agregar al carrito</button>
+						</div>
+						<div>
+							<a href="/products/edit/<%=detalleProducto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+							<form action="/products/<%=detalleProducto.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
+								<button type="submit" class="action-button delete">ELIMINAR</button>
+							</form>
+						</div>
 					</article>
 				</div>
 			</div>
@@ -84,6 +59,7 @@
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 </body>	
 </html>
