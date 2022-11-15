@@ -5,9 +5,6 @@ const multer = require('multer');
 const path = require('path');
 const { check } = require('express-validator');
 
-const multerPs = require('./../middlewares/multerPs')
-
-
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
      cb(null, path.join(__dirname,'../../public/img/products'));    // Ruta donde almacenamos el archivo
