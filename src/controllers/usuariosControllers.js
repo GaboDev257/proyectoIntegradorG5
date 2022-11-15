@@ -2,10 +2,13 @@ const path = require('path');
 
 const controlador = {
     register: (req,res) => {
-        res.render( './register.ejs')
+        res.render( './users/register.ejs')
     },
     login: (req, res) => {
-        res.render('./login.ejs')
+        res.render('./users/login.ejs')
+    },
+    profile: (req, res) => {
+        res.render('./users/profile.ejs')
     }
     
 }
