@@ -135,7 +135,7 @@ const controller = {
 			}
 		}
 
-		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', ProductoEncontrado.image));
+		fs.unlinkSync(path.join(__dirname, '../../public/img/products/', ProductoEncontrado.image));
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
 
