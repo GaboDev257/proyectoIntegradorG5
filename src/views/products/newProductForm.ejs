@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Include Head -->
-<%- include('partials/head.ejs', {title: 'Crear'}) %>
+<%- include('../partials/head.ejs', {title: 'Crear'}) %>
 <body>
 <!-- Header -->
-  <%- include('partials/topNavbar') %>
+  <%- include('../partials/topNavbar.ejs') %>
 <!-- /Header -->
 	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="titulo1">Publica tu producto</h2>
-			</div>
+		<div>
+				<div id="section-tittle">Publica tu producto</div>
 		</div>
 		<div class="col-12">
 			<form action="/products/create" method="POST" enctype="multipart/form-data" >
 				<div class="row product-detail">
-					<div class="col-12 col-md-6">
-						<label for="name" class="form-input">Nombre del producto:</label>
+					<div class="col-lg-6">
+						<label for="name" class="form-label">Nombre del producto:</label>
 						<input type="text" id="name" name="name" placeholder="Ej: Chocolates encantados" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
@@ -39,7 +37,7 @@
 						<label for="imagenProducto" class="form-label">Imagen</label>
 						<input type="file" name="imagenProducto" />
 					</div>
-					<div class="col-12">
+					<div class="pt-4">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>
 				</div>
@@ -47,7 +45,7 @@
 		</div>
 	</div>
 <!-- footer -->
-  <%- include('partials/footer') %>
+  <%- include('../partials/footer') %>
 <!-- /footer -->
 </body>	
 </html>

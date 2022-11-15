@@ -11,7 +11,7 @@ const controller = {
 	// Show all products
 	index: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('products',{productos: products})
+		res.render('products/products',{productos: products})
 	},
 
 	// Detail from one product
@@ -27,14 +27,14 @@ const controller = {
 			}
 		}
 
-		res.render('productDescription',{detalleProducto: productoEncontrado});
+		res.render('products/productDescription',{detalleProducto: productoEncontrado});
 
 	},
 
 
 	// Form to create
 	create: (req, res) => {
-		res.render('newProductForm');
+		res.render('products/newProductForm');
 	},
 	
 	// Create -  Method to store
@@ -76,7 +76,7 @@ const controller = {
 		
 		}
 		else{
-			res.render('newProductForm', {errors: errors.array() } ); 
+			res.render('products/newProductForm', {errors: errors.array() } ); 
 		}
 	
 		
@@ -94,7 +94,7 @@ const controller = {
 				}
 			}
 	
-			res.render('editProduct',{ProductoaEditar: productoEncontrado});
+			res.render('products/editProduct',{ProductoaEditar: productoEncontrado});
 		},
 
 	// Update - Method to update

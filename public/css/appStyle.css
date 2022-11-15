@@ -227,24 +227,25 @@
 /*====== Formularios ======*/
 .form-label {
     display: inline-block;
-    font-size: 1.6em;
+    font-size: 20px;
+    color: #FF6565;
     margin: 10px 0;
   }
   
   .form-input {
     display: block;
     width: 100%;
-    height: 45px;
+    height: 30px;
     margin-bottom: 15px;
-    font-size: 1.5em;
-    border-radius: 8px;
-    border: none;
-    border: solid 1px var(--gray);
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: black;
     padding: 0 15px;
   }
   
   textarea.form-input {
-    min-height: 140px;
+    min-height: 80px;
     resize: vertical;
     padding: 15px;
   }
@@ -265,8 +266,9 @@
 
 .product-detail {
     background-color: #ffffff;
+    border: 1px;
     border-radius: 8px;
-    
+    border-color: black;
   }
   
   .product-detail-img {
@@ -333,15 +335,16 @@
   }
   
   .buy-now-button {
-    background-color: var(--light-blue);
-    font-size: 1.6em;
-    color: #ffffff;
+    background-color: white;
+    font-size: 18px;
+    color: #FF6565;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
     border-radius: 8px;
-    border: none;
+    border: solid 1px;
+    border-color: #FF6565;
     margin-bottom: 15px;
   }
   
