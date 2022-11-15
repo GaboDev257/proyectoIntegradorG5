@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Include Head -->
+  <%- include('../partials/head', {title: 'Productos'}) %>
+<body>
+<!-- Header -->
+  <%- include('../partials/topnavbar') %>
+  <!-- list-of-products -->
+        <div class="w-100 pt-4 pb-5 flex-shrink-0" id="container-list">
+            <div class="container px-4">
+                <div class="row gy-6 gx-7 d-flex justify-items-center">
+                  <div id="section-tittle">
+                    <h5>Todos los productos</h5>
+                  </div>
+                  <% for (let i=0;i<productos.length;i++) { %> 
+                  <div class="col-lg-4 col-md-6 py-3">
+                    <div class="px-4 align-items-center">
+                      <div>
+                        <div class="text-center my-4">
+                          <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="frijoles"></a>
+                          
+                        </div>
+                        <div id="text-name" >
+                          <p><%= productos[i].name %></p>
+                        </div>
+                        <div id="price-home">
+                          <p>$ <%= productos[i].price %></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                  <% } %> 
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <%- include('../partials/footer.ejs') %>
+</body>
+</html>
