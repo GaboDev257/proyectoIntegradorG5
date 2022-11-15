@@ -1,192 +1,170 @@
-
 [
-    {
-     "id": 1,
-     "name": "Rana de Chocolate Amargo con Tarjeta de Mago",
-     "price": 300,
-     "discount": 0,
-     "category": "mas-vendidos",
-     "description": "Delicioso dulce de chocolate con leche en forma de rana. Cada rana viene en una caja pentagonal ornamentada con una tarjeta de mago. La tarjeta incluirá una biografía de uno de los fundadores de la casa de Hogwarts: Godric Gryffindor, Salazar Slytherin, Helga Hufflepuff y Rowena Ravenclaw o el director de Hogwarts Albus Dumbledore, Gilderoy Lockhart, Hengist of Woodcroft, Bertie Bott, Jocunda Sykes, Devlin Whitehorn , Garrick Ollivander, Merlín, Ignatia Wildsmith, Paracelso o Bridget Wenlock.",
-     "image": "dark-Chocolate-Frog-with-authentic-film-packaging.png"
-    },
-    {
-        "id": 2,
-        "name": "Abejas chispeantes",
-        "price": 180,
-        "discount": 0,
-        "category": "mas-vendidos",
-        "description": "¡Estas Abejas Chispeantes de Chocolate garantizan que tu boca explotará! Estos deliciosos chocolates con leche en forma de abeja contienen caramelos con sabor a fruta.",
-        "image": "fizzing-Whizzbees-Chocolate.png"
-    },
-    {
-        "id": 3,
-        "name": "Caramelos de Moscas",
-        "price": 100,
-        "discount": 0,
-        "category": "mas-vendidos",
-        "description": "Deleitese con estos sabrosos Caramelos de Moscas que están hechos de piezas únicas de chocolate con leche, con forma de mosca. Estos caramelos eran el dulce favorito de Scabbers, la rata de Ron Weasley. Ron le dijo a la gente que Scabbers podría haber disfrutado de algunos caramelos si no hubiera sido asesinado por el gato de Hermione Granger, Crookshanks. Con un delicioso sabor a dulce de azúcar, son el manjar sabroso perfecto para brujas o magos para compartir con sus amigos.",
-        "image": "fudge-Flies.png"
-    },
-    {
-        "id": 4,
-        "name": "Sapos de Menta",
-        "price": 370,
-        "discount": 0,
-        "category": "mas-vendidos",
-        "description": "Un favorito desde hace mucho tiempo de los estantes de Honeydukes Sweet Shop, son estos sapos mágicos de menta y chocolate negro. Cada sapo del tamaño de un bocado que hace agua la boca está infundido con un sabor distintivo a menta que seguramente lo dejará con ganas de más.",
-        "image": "peppermint-Toads.png"
-    },
-    {
-        "id": 5,
-        "name": "Monedas de Chocolate de Gringots",
-        "price": 230,
-        "discount": 0,
-        "category": "mas-vendidos",
-        "description": "Una bolsa de llena de monedas de chocolate con leche, igual que las monedas de oro que se encuentran en el banco de Gringotts.",
-        "image": "bag-of-Gringotts-Galleons-Chocolate-Coins.png"
-    },
-    {
-        "id": 6,
-        "name": "Frijoles Bertie Botts",
-        "price": 480,
-        "discount": 0,
-        "category": "mas-vendidos",
-        "description": "Llévate a casa estas sabrosas gominolas gourmet, que vienen en hasta 20 sabores. Los sabores van desde deliciosos hasta repugnantes y se presentan en la caja auténtica de Bertie Bott's. Los sabores incluyen malvaviscos, tutti-frutti, hierba, jabón y cerumen.",
-        "image": "bertie-Botts-Every-Flavour-Beans.png"
-    },
-    {
-        "id": 7,
-        "name": "Cerveza de mantequilla Edición Navideña",
-        "price": 200,
-        "discount": 0,
-        "category": "mas-vendidos",
-        "description": "¡Cerveza de mantequilla de edición limitada para la temporada festiva! Celebre la magia de la temporada con una cerveza de mantequilla navideña en casa, que se sirve mejor fría y directamente de la botella. Disponible solo por tiempo limitado.",
-        "image": "bottled-Butterbeer-Christmas-Limited-Edition.png"
-    },
-    {
-        "id": 8,
-        "name": "Cerveza de Mantequilla",
-        "price": 150,
-        "discount": 0,
-        "category": "nuevos-ingresos",
-        "description": "¡Experimenta la bebida favorita de todos! ¡La combinación única de ingredientes de alto secreto hace que la cerveza de mantequilla embotellada sea una prueba obligada para cualquier aspirante a bruja o mago!",
-        "image": "bottled-Butterbeer.png"
-    },
-    {
-        "id": 9,
-        "name": "Bombones explosivos",
-        "price": 500,
-        "discount": 0,
-        "category": "nuevos-ingresoss",
-        "description": "¿Por qué no probar una de las golosinas más inusuales del mundo mágico? Estos deliciosos bombones de chocolate blanco están rellenos de una sabrosa trufa con sabor a naranja y piña, el dulce perfecto para hacer agua la boca.",
-        "image": "exploding-Bon-Bons.png"
-    },
-    {
-        "id": 10,
-        "name": "Barra de Chocolate Griffindor",
-        "price": 250,
-        "discount": 0,
-        "category": "nuevos-ingresos",
-        "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate Gryffindor. Este delicioso refrigerio está hecho con chocolate con leche y es el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque hecho a la medida que presenta un diseño bordo y amarillo, los colores tradicionales de la casa Gryffindor. ",
-        "image": "griffindor-Dark-Chocolate-Bar.png"
-    },
-    {
-        "id": 11,
-        "name": "Barra de Chocolate Hufflepuff",
-        "price": 250,
-        "discount": 0,
-        "category": "nuevos-ingresos",
-        "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate con leche Hufflepuff. Este delicioso refrigerio está hecho de pedazos de caramelo recubiertos con chocolate con leche, lo que lo convierte en el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque a medida que presenta un diseño en negro y amarillo, los colores tradicionales de la casa Hufflepuff. ",
-        "image": "hufflepuff-Milk-Chocolate-Bar.png"
-    },
-    {
-        "id": 12,
-        "name": "Barra de Chocolate Ravenclaw",
-        "price": 250,
-        "discount": 0,
-        "category": "nuevos-ingresos",
-        "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate con leche Ravenclaw. Este delicioso refrigerio está hecho de trozos de caramelo recubiertos con chocolate con leche, lo que lo convierte en el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque a medida que presenta un diseño azul marino y gris, los colores tradicionales de la casa Ravenclaw. ",
-        "image": "ravenclaw-Milk-Chocolate-Bar.png"
-    },
-    {
-        "id": 13,
-        "name": "Barra de Chocolate Slytherin",
-        "price": 250,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate oscuro Slytherin. Este delicioso refrigerio está hecho con chocolate negro con sabor a menta y es el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque hecho a medida que presenta un diseño verde esmeralda y gris, los colores tradicionales de la casa Slytherin. ",
-        "image": "slytherin-Dark-Chocolate-Bar.png"
-    },
-    {
-        "id": 14,
-        "name": "Caramelos de Mantequilla",
-        "price": 320,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "Pruebe uno de los sabores favoritos de la tienda de dulces Honeydukes, con estos deliciosos caramelos de mantequilla. ¡Son el dulce perfecto para compartir con un compañero brujo o mago!",
-        "image": "honeydukes-All-Butter-Toffees.png"
-    },
-    {
-        "id": 15,
-        "name": "Chocolate Amargo Honeydukes",
-        "price": 360,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "Pruebe uno de los sabores favoritos de la tienda de dulces Honeydukes, con este delicioso chocolate oscuro. Inspirado en los dulces a bordo del Hogwarts Express, este sabroso panal de chocolate negro es el regalo perfecto para disfrutar ¡Es el dulce perfecto para compartir con un compañero brujo o mago!",
-        "image": "honeydukes-Dark-Chocolate-Honeycomb.png"
-    },
-    {
-        "id": 16,
-        "name": "Chocolate Con Leche Honeydukes",
-        "price": 100,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "Pruebe uno de los sabores favoritos de la tienda de dulces Honeydukes, con este delicioso chocolate con leche. Inspirado en los dulces a bordo del Hogwarts Express, este sabroso panal de chocolate negro es el regalo perfecto para disfrutar ¡Es el dulce perfecto para compartir con un compañero brujo o mago!",
-        "image": "honeydukes-Milk-Chocolate-Honeycomb.png"
-    },
-    {
-        "id": 17,
-        "name": "Lingote de Chocolate Gringots",
-        "price": 490,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "Llévate a casa esta deliciosa réplica de una barra de oro de Gringotts. El lingote de chocolate incluye todas las características que encontraría en un lingote de oro auténtico en el banco Gringotts. El sabroso manjar se completa con su propio número de serie y número de pureza, junto con un diseño grabado del logotipo de Gringotts que incluye un duende de regalo.",
-        "image": "milk-Chocolate-Gringotts-Gold-Bar.png"
-    },
-    {
-        "id": 18,
-        "name": "Taza Gryffindor",
-        "price": 550,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "¿Qué se necesita para ser parte de la casa de Gryffindor? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo está cubierto con varios simbolismos de Gryffindor, incluida la espada de Godric Gryffindor y Fawkes el fénix. En el borde interior se puede ver al león de Gryffindor asomando por el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: valor, determinación y valentía. Con un acabado brillante, el rojo y el dorado resaltan en los gloriosos colores de la casa Gryffindor. La taza de atributos de Gryffindor puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que brinda un peso satisfactorio cuando se toma en las manos.",
-        "image": "gryffindor-Attribute-Mug.png"
-    },
-    {
-        "id": 19,
-        "name": "Taza Slytherin",
-        "price": 550,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "¿Qué se necesita para parte de la casa de Slytherin? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo está cubierto con varios simbolismos de Slytherin, incluido el relicario de Salazar Slytherin. En el borde interior se puede ver la serpiente de Slytherin asomando por el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: Ambición, Astucia y Orgullo. Con un acabado brillante, verde esmeralda intenso y negro dorado resaltan los gloriosos colores de la casa Slytherin. La taza de atributos de Slytherin puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que brinda un peso satisfactorio cuando se toma en las manos.",
-        "image": "slytherin-Attribute-Mug.png"
-    },
-    {
-        "id": 20,
-        "name": "Taza Hufflepuff",
-        "price": 550,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "¿Qué se necesita para parte de la casa de Hufflepuff? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo cubierto con varios simbolismos de Hufflepuff, incluida la copa de Helga Hufflepuff y un reloj de arena. En el borde interior se puede ver el tejón de Hufflepuff asomando por el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: Paciencia, Dedicación y Lealtad. Con un acabado brillante, amarillo y negro resaltan los gloriosos colores de la casa Hufflepuff. La taza de atributos de Hufflepuff puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que proporciona un peso satisfactorio cuando se toma en las manos.",
-        "image": "hufflepuff-Attribute-Mug.png"
-    },
-    {
-        "id": 21,
-        "name": "Taza Ravenclaw",
-        "price": 550,
-        "discount": 0,
-        "category": "encuentra-tu-casa",
-        "description": "¿Qué se necesita para parte de la casa de Ravenclaw? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo cubierto con varios simbolismos de Ravenclaw, incluida la diadema de Rowena Ravenclaw. En el borde interior, se puede ver el águila de Ravenclaw asomándose desde el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: sabiduría, aprendizaje e ingenio. Con un acabado brillante, un azul marino intenso y un toque negro resaltan los gloriosos colores de la casa Ravenclaw. La taza Ravenclaw Attribute puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que proporciona un peso satisfactorio cuando se toma en las manos.",
-        "image": "ravenclaw-Attribute-Mug.png"
-    }
+ {
+  "id": 1,
+  "name": "Rana de Chocolate Amargo con Tarjeta de Mago",
+  "price": 300,
+  "category": "products",
+  "description": "Delicioso dulce de chocolate con leche en forma de rana. Cada rana viene en una caja pentagonal ornamentada con una tarjeta de mago. La tarjeta incluirá una biografía de uno de los fundadores de la casa de Hogwarts: Godric Gryffindor, Salazar Slytherin, Helga Hufflepuff y Rowena Ravenclaw o el director de Hogwarts Albus Dumbledore, Gilderoy Lockhart, Hengist of Woodcroft, Bertie Bott, Jocunda Sykes, Devlin Whitehorn , Garrick Ollivander, Merlín, Ignatia Wildsmith, Paracelso o Bridget Wenlock.",
+  "image": "dark-Chocolate-Frog-with-authentic-film-packaging.png"
+ },
+ {
+  "id": 2,
+  "name": "Abejas chispeantes",
+  "price": 180,
+  "category": "mas-vendidos",
+  "description": "¡Estas Abejas Chispeantes de Chocolate garantizan que tu boca explotará! Estos deliciosos chocolates con leche en forma de abeja contienen caramelos con sabor a fruta.",
+  "image": "fizzing-Whizzbees-Chocolate.png"
+ },
+ {
+  "id": 3,
+  "name": "Caramelos de Moscas",
+  "price": 100,
+  "category": "mas-vendidos",
+  "description": "Deleitese con estos sabrosos Caramelos de Moscas que están hechos de piezas únicas de chocolate con leche, con forma de mosca. Estos caramelos eran el dulce favorito de Scabbers, la rata de Ron Weasley. Ron le dijo a la gente que Scabbers podría haber disfrutado de algunos caramelos si no hubiera sido asesinado por el gato de Hermione Granger, Crookshanks. Con un delicioso sabor a dulce de azúcar, son el manjar sabroso perfecto para brujas o magos para compartir con sus amigos.",
+  "image": "fudge-Flies.png"
+ },
+ {
+  "id": 4,
+  "name": "Sapos de Menta",
+  "price": 370,
+  "category": "mas-vendidos",
+  "description": "Un favorito desde hace mucho tiempo de los estantes de Honeydukes Sweet Shop, son estos sapos mágicos de menta y chocolate negro. Cada sapo del tamaño de un bocado que hace agua la boca está infundido con un sabor distintivo a menta que seguramente lo dejará con ganas de más.",
+  "image": "peppermint-Toads.png"
+ },
+ {
+  "id": 5,
+  "name": "Monedas de Chocolate de Gringots",
+  "price": 230,
+  "category": "mas-vendidos",
+  "description": "Una bolsa de llena de monedas de chocolate con leche, igual que las monedas de oro que se encuentran en el banco de Gringotts.",
+  "image": "bag-of-Gringotts-Galleons-Chocolate-Coins.png"
+ },
+ {
+  "id": 6,
+  "name": "Frijoles Bertie Botts",
+  "price": 480,
+  "category": "mas-vendidos",
+  "description": "Llévate a casa estas sabrosas gominolas gourmet, que vienen en hasta 20 sabores. Los sabores van desde deliciosos hasta repugnantes y se presentan en la caja auténtica de Bertie Bott's. Los sabores incluyen malvaviscos, tutti-frutti, hierba, jabón y cerumen.",
+  "image": "bertie-Botts-Every-Flavour-Beans.png"
+ },
+ {
+  "id": 7,
+  "name": "Cerveza de mantequilla Edición Navideña",
+  "price": 200,
+  "category": "mas-vendidos",
+  "description": "¡Cerveza de mantequilla de edición limitada para la temporada festiva! Celebre la magia de la temporada con una cerveza de mantequilla navideña en casa, que se sirve mejor fría y directamente de la botella. Disponible solo por tiempo limitado.",
+  "image": "bottled-Butterbeer-Christmas-Limited-Edition.png"
+ },
+ {
+  "id": 8,
+  "name": "Cerveza de Mantequilla",
+  "price": 150,
+  "category": "nuevos-ingresos",
+  "description": "¡Experimenta la bebida favorita de todos! ¡La combinación única de ingredientes de alto secreto hace que la cerveza de mantequilla embotellada sea una prueba obligada para cualquier aspirante a bruja o mago!",
+  "image": "bottled-Butterbeer.png"
+ },
+ {
+  "id": 9,
+  "name": "Bombones explosivos",
+  "price": 500,
+  "category": "nuevos-ingresoss",
+  "description": "¿Por qué no probar una de las golosinas más inusuales del mundo mágico? Estos deliciosos bombones de chocolate blanco están rellenos de una sabrosa trufa con sabor a naranja y piña, el dulce perfecto para hacer agua la boca.",
+  "image": "exploding-Bon-Bons.png"
+ },
+ {
+  "id": 10,
+  "name": "Barra de Chocolate Griffindor",
+  "price": 250,
+  "category": "nuevos-ingresos",
+  "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate Gryffindor. Este delicioso refrigerio está hecho con chocolate con leche y es el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque hecho a la medida que presenta un diseño bordo y amarillo, los colores tradicionales de la casa Gryffindor. ",
+  "image": "griffindor-Dark-Chocolate-Bar.png"
+ },
+ {
+  "id": 11,
+  "name": "Barra de Chocolate Hufflepuff",
+  "price": 250,
+  "category": "nuevos-ingresos",
+  "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate con leche Hufflepuff. Este delicioso refrigerio está hecho de pedazos de caramelo recubiertos con chocolate con leche, lo que lo convierte en el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque a medida que presenta un diseño en negro y amarillo, los colores tradicionales de la casa Hufflepuff. ",
+  "image": "hufflepuff-Milk-Chocolate-Bar.png"
+ },
+ {
+  "id": 12,
+  "name": "Barra de Chocolate Ravenclaw",
+  "price": 250,
+  "category": "nuevos-ingresos",
+  "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate con leche Ravenclaw. Este delicioso refrigerio está hecho de trozos de caramelo recubiertos con chocolate con leche, lo que lo convierte en el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque a medida que presenta un diseño azul marino y gris, los colores tradicionales de la casa Ravenclaw. ",
+  "image": "ravenclaw-Milk-Chocolate-Bar.png"
+ },
+ {
+  "id": 13,
+  "name": "Barra de Chocolate Slytherin",
+  "price": 250,
+  "category": "encuentra-tu-casa",
+  "description": "Prueba el mundo mágico con esta deliciosa barra de chocolate oscuro Slytherin. Este delicioso refrigerio está hecho con chocolate negro con sabor a menta y es el dulce perfecto para hacer que se te haga agua la boca. La barra de chocolate viene en un empaque hecho a medida que presenta un diseño verde esmeralda y gris, los colores tradicionales de la casa Slytherin. ",
+  "image": "slytherin-Dark-Chocolate-Bar.png"
+ },
+ {
+  "id": 14,
+  "name": "Caramelos de Mantequilla",
+  "price": 320,
+  "category": "encuentra-tu-casa",
+  "description": "Pruebe uno de los sabores favoritos de la tienda de dulces Honeydukes, con estos deliciosos caramelos de mantequilla. ¡Son el dulce perfecto para compartir con un compañero brujo o mago!",
+  "image": "honeydukes-All-Butter-Toffees.png"
+ },
+ {
+  "id": 15,
+  "name": "Chocolate Amargo Honeydukes",
+  "price": 360,
+  "category": "encuentra-tu-casa",
+  "description": "Pruebe uno de los sabores favoritos de la tienda de dulces Honeydukes, con este delicioso chocolate oscuro. Inspirado en los dulces a bordo del Hogwarts Express, este sabroso panal de chocolate negro es el regalo perfecto para disfrutar ¡Es el dulce perfecto para compartir con un compañero brujo o mago!",
+  "image": "honeydukes-Dark-Chocolate-Honeycomb.png"
+ },
+ {
+  "id": 16,
+  "name": "Chocolate Con Leche Honeydukes",
+  "price": 100,
+  "category": "encuentra-tu-casa",
+  "description": "Pruebe uno de los sabores favoritos de la tienda de dulces Honeydukes, con este delicioso chocolate con leche. Inspirado en los dulces a bordo del Hogwarts Express, este sabroso panal de chocolate negro es el regalo perfecto para disfrutar ¡Es el dulce perfecto para compartir con un compañero brujo o mago!",
+  "image": "honeydukes-Milk-Chocolate-Honeycomb.png"
+ },
+ {
+  "id": 17,
+  "name": "Lingote de Chocolate Gringots",
+  "price": 490,
+  "category": "encuentra-tu-casa",
+  "description": "Llévate a casa esta deliciosa réplica de una barra de oro de Gringotts. El lingote de chocolate incluye todas las características que encontraría en un lingote de oro auténtico en el banco Gringotts. El sabroso manjar se completa con su propio número de serie y número de pureza, junto con un diseño grabado del logotipo de Gringotts que incluye un duende de regalo.",
+  "image": "milk-Chocolate-Gringotts-Gold-Bar.png"
+ },
+ {
+  "id": 18,
+  "name": "Taza Gryffindor",
+  "price": 550,
+  "category": "encuentra-tu-casa",
+  "description": "¿Qué se necesita para ser parte de la casa de Gryffindor? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo está cubierto con varios simbolismos de Gryffindor, incluida la espada de Godric Gryffindor y Fawkes el fénix. En el borde interior se puede ver al león de Gryffindor asomando por el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: valor, determinación y valentía. Con un acabado brillante, el rojo y el dorado resaltan en los gloriosos colores de la casa Gryffindor. La taza de atributos de Gryffindor puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que brinda un peso satisfactorio cuando se toma en las manos.",
+  "image": "gryffindor-Attribute-Mug.png"
+ },
+ {
+  "id": 19,
+  "name": "Taza Slytherin",
+  "price": 550,
+  "category": "encuentra-tu-casa",
+  "description": "¿Qué se necesita para parte de la casa de Slytherin? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo está cubierto con varios simbolismos de Slytherin, incluido el relicario de Salazar Slytherin. En el borde interior se puede ver la serpiente de Slytherin asomando por el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: Ambición, Astucia y Orgullo. Con un acabado brillante, verde esmeralda intenso y negro dorado resaltan los gloriosos colores de la casa Slytherin. La taza de atributos de Slytherin puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que brinda un peso satisfactorio cuando se toma en las manos.",
+  "image": "slytherin-Attribute-Mug.png"
+ },
+ {
+  "id": 20,
+  "name": "Taza Hufflepuff",
+  "price": 550,
+  "category": "encuentra-tu-casa",
+  "description": "¿Qué se necesita para parte de la casa de Hufflepuff? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo cubierto con varios simbolismos de Hufflepuff, incluida la copa de Helga Hufflepuff y un reloj de arena. En el borde interior se puede ver el tejón de Hufflepuff asomando por el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: Paciencia, Dedicación y Lealtad. Con un acabado brillante, amarillo y negro resaltan los gloriosos colores de la casa Hufflepuff. La taza de atributos de Hufflepuff puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que proporciona un peso satisfactorio cuando se toma en las manos.",
+  "image": "hufflepuff-Attribute-Mug.png"
+ },
+ {
+  "id": 21,
+  "name": "Taza Ravenclaw",
+  "price": 550,
+  "category": "encuentra-tu-casa",
+  "description": "¿Qué se necesita para parte de la casa de Ravenclaw? ¡Esta taza bellamente diseñada puede ayudar a responder esa pregunta! El escudo cubierto con varios simbolismos de Ravenclaw, incluida la diadema de Rowena Ravenclaw. En el borde interior, se puede ver el águila de Ravenclaw asomándose desde el borde, mientras que la parte posterior de la taza muestra con orgullo los tres rasgos más destacados asociados con la casa: sabiduría, aprendizaje e ingenio. Con un acabado brillante, un azul marino intenso y un toque negro resaltan los gloriosos colores de la casa Ravenclaw. La taza Ravenclaw Attribute puede contener hasta 16 oz de su bebida fría o caliente favorita, y presenta un diseño ligeramente cónico que proporciona un peso satisfactorio cuando se toma en las manos.",
+  "image": "ravenclaw-Attribute-Mug.png"
+ }
 ]

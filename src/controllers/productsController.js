@@ -17,14 +17,20 @@ const controller = {
 	// Detail from one product
 	detail: (req, res) => {
 		
-		const idProducto = req.params.id;
-		for(let i=0;i<products.length;i++){
-			if (products[i].id==idProducto){
-				var productoEncontrado = products[i];
+		let idURL = req.params.id;
+		let productoEncontrado;
+
+		for (let p of products){
+			if (p.id==idURL){
+				productoEncontrado=p;
+				break;
 			}
 		}
+
 		res.render('productDescription',{detalleProducto: productoEncontrado});
+
 	},
+
 
 	// Form to create
 	create: (req, res) => {
@@ -70,70 +76,70 @@ const controller = {
 		
 		}
 		else{
-			res.render('product-create-form', {errors: errors.array() } ); 
+			res.render('newProductForm', {errors: errors.array() } ); 
 		}
 	
 		
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
+		edit: (req, res) => {
 
-		let idProducto = req.params.id;	
-
-		for(let i=0;i<products.length;i++){
-			if (products[i].id==idProducto){
-				var productoEncontrado = products[i];
+			let id = req.params.id;
+			let productoEncontrado;
+	
+			for (let s of products){
+				if (id==s.id){
+					productoEncontrado=s;
+				}
 			}
-		}
+	
+			res.render('editProduct',{ProductoaEditar: productoEncontrado});
+		},
 
-		//const productoEnDetalle = products.find(element => element.id == req.params.id); // mejora
-
-		res.render('editProduct',{detalleProducto: productoEncontrado});
-	},
 	// Update - Method to update
 	update: (req, res) => {
+		
+		let id = req.params.id;
+		let productoEncontrado;
 
-		let valoresNuevos = req.body;
-		let idProducto = req.params.id;	
-
-
-		for(let i=0;i<products.length;i++){
-			if (products[i].id==idProducto){
-
-				products[i].name = valoresNuevos.name;
-				products[i].price = valoresNuevos.price;
-				products[i].category = valoresNuevos.category;
-				products[i].description = valoresNuevos.description;
-
-				var productoEncontrado = products[i];
-
+		for (let s of products){
+			if (id==s.id){
+				s.name= req.body.name;
+				s.price= req.body.price;
+				s.category= req.body.category;
+				s.description= req.body.description;
 				break;
 			}
 		}
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products,null, ' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
 
-		res.render('productDescription',{detalleProducto: productoEncontrado})
-		
+		res.redirect('/');
 	},
+
 
 	// Delete - Delete one product from DB
 	erase : (req, res) => {
 
-		let idProducto = req.params.id;	
-		for(let i=0;i<products.length;i++){
-			if (products[i].id==idProducto){
-				var nombreImagen=products[i].image;
-				products.splice(i,1);
-				break;
+		let id = req.params.id;
+		let ProductoEncontrado;
+
+		let Nproducts = products.filter(function(e){
+			return id!=e.id;
+		})
+
+		for (let producto of products){
+			if (producto.id == id){
+			    ProductoEncontrado=producto;
 			}
 		}
-		
-	    fs.writeFileSync(productsFilePath, JSON.stringify(products,null, ' '));
-		fs.unlinkSync(path.join(__dirname,'../../public/img/products/'+nombreImagen));
-		res.render('home',{productos: products});
 
+		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', ProductoEncontrado.image));
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
+
+		res.redirect('/');
 		}
 	
 };
