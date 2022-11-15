@@ -11,17 +11,17 @@
 	<div class="container products-wrapper">
 		<div class="product-detail">
 			<div class="row">
-				<div class="divizq col-lg-8">
-					<div>
+				<div class="row col-lg-6 align-items-center text-center">
+					<div class="col">
 						<img src="/img/products/<%=detalleProducto.image %>" alt="product image" class="img-fluid" width="300" height="300">
-				    	<div class="divhearth"><i class="fa-duotone fa-heart"></i></div>
+				    	<!--<div class="divhearth"><i class="fa-duotone fa-heart"></i></div>-->
 					</div> 
-					<div class="divchevron"><i class="fa-sharp fa-solid fa-chevron-right"></i>  </div> 
+					<!--<div class="divchevron"><i class="fa-sharp fa-solid fa-chevron-right"></i>  </div>--> 
 				</div>
-				<div class="col-12 col-lg-4">
+				<div class="col-12 col-lg-6">
 					<article class="product-detail-info">
-						<h6 class="product-detail-tittle"><%=detalleProducto.name %></h6>
-							<p class="product-detail-price small">
+						<div class="product-detail-title"><%=detalleProducto.name %></div>
+							<p class="product-detail-price">
 								<span>$ <%=detalleProducto.price %></span>
 							</p>
 						<div class="text-left">
@@ -30,9 +30,9 @@
 							</p>
 						</div>	
 						<div class="divbutton">
-							<button type="button" class="btn btn-light buttoncart">Agregar al carrito</button>
+							<button type="button" class="btn buttoncart">Agregar al carrito</button>
 						</div>
-						<div>
+						<div class="divbuttons">
 							<a href="/products/edit/<%=detalleProducto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
 							<form action="/products/<%=detalleProducto.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
 								<button type="submit" class="action-button delete">ELIMINAR</button>
