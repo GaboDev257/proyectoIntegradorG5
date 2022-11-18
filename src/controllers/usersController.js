@@ -1,22 +1,38 @@
+const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
 
-const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 const controlador = {
+	// ALL USERS
+
 	// LOGIN USER
 	login: (req, res) => {
-        res.render('./users/login.ejs')
+        res.render('./users/login')
     },
 
 	// DETAIL PROFILE
-    profile: (req, res) => {
-        res.render('./users/profile.ejs')
-    },
+	profile: (req, res) => {
+		
+		let idURL = req.params.id;
+		let usuarioEncontrado;
 
-    // Form to create
+		for (let p of users){
+			if (p.id==idURL){
+				usuarioEncontrado=p;
+				break;
+			}
+		}
+
+		res.render('users/profile',{detallePerfil: usuarioEncontrado});
+
+	},
+
+
+    // Form to register
     register: (req,res) => {
         res.render( './users/register')
 	},
@@ -31,37 +47,37 @@ const controlador = {
 
 			idNuevo=0;
 
-		for (let s of users){
-			if (idNuevo<s.id){
-				idNuevo=s.id;
+		for (let u of users){
+			if (idNuevo<u.id){
+				idNuevo=u.id;
 			}
 		}
 
 		idNuevo++;
 
-		let nombreImagen = req.file.filename;
+		/*let nombreImagen = req.file.filename;*/
 
 
 		let usuarioNuevo =  {
-			id: 1,
-            name: "Juan",
-            lastName: "Maldonado",
-            userName: "juancito",
-            email: "jcmaldonado@gmail.com",
-            birthDate: "20/06/1990",
-			image: nombreImagen
+			id: idNuevo,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            userName: req.body.userName,
+            email: req.body.email,
+            birthDate: req.body.birthDate,
+			/*image: nombreImagen*/
 		};
 
 		users.push(usuarioNuevo);
 
 		fs.writeFileSync(usersFilePath, JSON.stringify(users,null,' '));
 
-		res.redirect('/');
+		res.redirect('/users/login');
 
 		
 		}
 		else{
-			res.render('products/newProductForm', {errors: errors.array() } ); 
+			res.render('users/register', {errors: errors.array() } ); 
 		}
 	
 		

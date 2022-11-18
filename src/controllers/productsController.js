@@ -104,7 +104,7 @@ const controller = {
 		for (let s of products){
 			if (id==s.id){
 				s.name= req.body.name;
-				s.price= req.body.price;
+				s.price= req.body.price;  
 				s.category= req.body.category;
 				s.description= req.body.description;
 				break;

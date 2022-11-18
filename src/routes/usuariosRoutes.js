@@ -16,17 +16,25 @@ const multerDiskStorage = multer.diskStorage({
     }
 }); 
 
+const uploadFile = multer({ storage: multerDiskStorage });
+
+
+let validaciones = [
+	check('name').notEmpty().withMessage('Complete campo')
+];  
+
 
 /*** LOGIN USER ***/
 router.get('/login', usersController.login)
 
 /*** CREATE ONE USER ***/ 
 router.get('/register', usersController.register) 
-router.post('/register', uploadFile.single('imagenUsuario'), usuariosController.store); 
+router.post('/register', usersController.store); 
+/*router.post('/register', uploadFile.single('imagenUsuario'), usersController.store); */
 
 /*** EDIT ONE PROFILE ***/ 
 router.get('/profile/:id', usersController.profile); 
-router.put('/profile/:id', usersController.update); 
+/* router.put('/profile/:id', usersController.update); */
 
 
 module.exports = router 

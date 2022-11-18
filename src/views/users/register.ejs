@@ -17,56 +17,56 @@
          <img src='/img/Registro2.jpg' alt='la imagen no esta' class="imgIzquierda img-fluid" > 
     </div>   
     <div class="col-6 fz15 center" style="font-family:verdana" >
-        <div> 
-        <a href="/"><img src="/img/logo.png" alt="no esta" class="logo img-fluid"></a>
-        </div>
-        <div> 
-            <p class="col-9 crearcuenta1"> Crear cuenta </p>
-        </div>
-        <div>
-            <form action="/users/register" method="POST" enctype="multipart/form-data" class="col-9" >
-                <div>
-                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                    <input type="text"  class="form-control"  placeholder="Nombre/s">
-                </div>
-                <div>
-                    <label for="exampleFormControlInput2" class="form-label">Apellido</label>
-                    <input type="text"  class="form-control"  placeholder="Apellido/s">
-                </div>
-                <div>
-                    <label for="exampleFormControlInput3" class="form-label">Correo Electronico</label>
-                    <input type="email"  class="form-control"  placeholder="name@example.com">
-                </div>
-                <div>
-                    <label for="exampleFormControlInput4" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control"  placeholder="Password">
-                </div>
-                <div>
-                    <label for="exampleFormControlInput4" class="form-label">Confirmar Contraseña</label>
-                    <input type="password" class="form-control"  placeholder="Password">
-                </div>
-            </form>    
-        </div>
-        <br>
-        <div class="col-9 mt15">
-            <div>
-                <button type="button" class="btn btn-success d-grid gap-2 col-12 mx-auto color-boton-verde " type="submit">Crear Cuenta</button>
+        <form action="/users/register" method="POST" enctype="multipart/form-data" >
+            <div> 
+                <a href="/"><img src="/img/logo.png" alt="no esta" class="logo img-fluid"></a>
             </div>
-            <div class="mt15">
-                <p> o </p>
+            <div> 
+                <p class="col-9 crearcuenta1"> Crear cuenta </p>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-light ">
-                    <img src="/img/logogoogle.png" alt="no esta">
-                    <span class="text-dark">Registrarse con Google</span>
-                </button>
+                <div>
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" id="name" name="name"  class="form-control"  placeholder="Nombre/s">
+                </div>
+                <div>
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" id="lastName" name="lastName"   class="form-control"  placeholder="Apellido/s">
+                </div>
+                <div>
+                    <label for="email" class="form-label">Correo Electronico</label>
+                    <input type="email"  id="email" name="email" class="form-control"  placeholder="name@example.com">
+                </div>
+                <div>
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" name="password" class="form-control"  placeholder="Password">
+                </div>
+                <div>
+                    <label for="password" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" id="password" name="password" class="form-control"  placeholder="Password">
+                </div>  
             </div>
-        </div>
-        <div class="col-9 mt15">
-            <span>
-                <p>¿Ya tienes cuenta? <a href="./login">Ingresar</a><p>
-            </span>
-        </div>
+            <br>
+            <div class="col-9 mt15">
+                <div>
+                    <button type="submit" class="btn btn-success d-grid gap-2 col-12 mx-auto color-boton-verde " >Crear Cuenta</button>
+                </div>
+                <div class="mt15">
+                    <p> o </p>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-light ">
+                        <img src="/img/logogoogle.png" alt="no esta">
+                        <span class="text-dark">Registrarse con Google</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-9 mt15">
+                <span>
+                    <p>¿Ya tienes cuenta? <a href="./login">Ingresar</a><p>
+                </span>
+            </div>
+        </form>
     </div>
 </section>
 

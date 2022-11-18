@@ -1,58 +1,50 @@
 [
-    {
-     "id": 1,
-     "name": "Juan",
-     "lastname": "Maldonado",
-     "user-name": "juancito",
-     "email": "jcmaldonado@gmail.com",
-     "birth-date": "20/06/1990"
-     
-    },
-    {
-        "id": 2,
-        "name": "Macarena",
-        "lastname": "Gonzales",
-        "user-name": "maca1999",
-        "email": "maca-gonzls@gmail.com",
-        "birth-date": "01/07/1999"
-        
-       },
-       {
-        "id": 3,
-        "name": "Agustin",
-        "lastname": "Villagra",
-        "user-name": "agus-tin",
-        "email": "a-villagra@hotmail.com",
-        "birth-date": "13/05/1991"
-        
-       },
-       {
-        "id": 4,
-        "name": "Valentina",
-        "lastname": "Perez",
-        "user-name": "valu123",
-        "email": "valuperez@gmail.com",
-        "birth-date": "29/11/2002"
-        
-       },
-       {
-        "id": 5,
-        "name": "Rocio",
-        "lastname": "Hernandez",
-        "user-name": "rochi-h",
-        "email": "hernandez.rochi@yahoo.com.ar",
-        "birth-date": "17/08/2005"
-        
-       }, 
-       {
-        "id": 6,
-        "name": "Ignacio",
-        "lastname": "Romero",
-        "user-name": "nacho2001",
-        "email": "nachito-romero2001@gmail.com",
-        "birth-date": "05/09/2001"
-        
-       }
-
+ {
+  "id": 1,
+  "name": "Juan",
+  "lastName": "Maldonado",
+  "userName": "juancito",
+  "email": "jcmaldonado@gmail.com",
+  "birthDate": "20/06/1990"
+ },
+ {
+  "id": 2,
+  "name": "Macarena",
+  "lastName": "Gonzales",
+  "userName": "maca1999",
+  "email": "maca-gonzls@gmail.com",
+  "birthDate": "01/07/1999"
+ },
+ {
+  "id": 3,
+  "name": "Agustin",
+  "lastName": "Villagra",
+  "userName": "agus-tin",
+  "email": "a-villagra@hotmail.com",
+  "birthDate": "13/05/1991"
+ },
+ {
+  "id": 4,
+  "name": "Valentina",
+  "lastName": "Perez",
+  "userName": "valu123",
+  "email": "valuperez@gmail.com",
+  "birthDate": "29/11/2002"
+ },
+ {
+  "id": 5,
+  "name": "Rocio",
+  "lastName": "Hernandez",
+  "userName": "rochi-h",
+  "email": "hernandez.rochi@yahoo.com.ar",
+  "birthDate": "17/08/2005"
+ },
+ {
+  "id": 6,
+  "name": "Ignacio",
+  "lastName": "Romero",
+  "userName": "nacho2001",
+  "email": "nachito-romero2001@gmail.com",
+  "birthDate": "05/09/2001"
+ }
 ]
-    
