@@ -9,17 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body class="container">
-
-    <%- include('../partials/topNavbar.ejs') %> 
-
 <section class="row container_section">
     <div class="col">
-         <img src='/img/Registro2.jpg' alt='la imagen no esta' class="imgIzquierda img-fluid" > 
+        <img src='/img/Registro2.jpg' alt='la imagen no esta' class="imgIzquierda img-fluid" > 
     </div>   
     <div class="col-6 fz15 center" style="font-family:verdana" >
         <form action="/users/register" method="POST" enctype="multipart/form-data" >
             <div> 
-                <a href="/"><img src="/img/logo.png" alt="no esta" class="logo img-fluid"></a>
+                <a href="/"><img src="/img/logo.png" alt="company-logo" class="logo img-fluid"></a>
             </div>
             <div> 
                 <p class="col-9 crearcuenta1"> Crear cuenta </p>
@@ -32,6 +29,10 @@
                 <div>
                     <label for="lastName" class="form-label">Apellido</label>
                     <input type="text" id="lastName" name="lastName"   class="form-control"  placeholder="Apellido/s">
+                </div>
+                <div>
+                    <label for="userName" class="form-label">Username</label>
+                    <input type="text"  id="userName" name="userName" class="form-control"  placeholder="nickname">
                 </div>
                 <div>
                     <label for="email" class="form-label">Correo Electronico</label>
@@ -69,8 +70,5 @@
         </form>
     </div>
 </section>
-
-<%- include('../partials/footer') %>   
-
 </body>
 </html>

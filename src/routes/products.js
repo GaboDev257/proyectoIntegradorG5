@@ -29,11 +29,11 @@ let validaciones = [
 const productsController = require('../controllers/productsController');
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', validaciones, productsController.index); 
+router.get('/', productsController.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/create', uploadFile.single('imagenProducto'), productsController.store); 
+router.post('/create', uploadFile.single('imagenProducto'),validaciones, productsController.store); 
 
 
 /*** GET ONE PRODUCT ***/ 
@@ -41,7 +41,7 @@ router.get('/detail/:id', productsController.detail);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id', productsController.update); 
+router.put('/edit/:id', validaciones, productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

@@ -29,12 +29,16 @@ router.get('/login', usersController.login)
 
 /*** CREATE ONE USER ***/ 
 router.get('/register', usersController.register) 
-router.post('/register', usersController.store); 
+router.post('/register', validaciones, usersController.store); 
 /*router.post('/register', uploadFile.single('imagenUsuario'), usersController.store); */
 
-/*** EDIT ONE PROFILE ***/ 
+/*** DETAIL PROFILE ***/ 
 router.get('/profile/:id', usersController.profile); 
-/* router.put('/profile/:id', usersController.update); */
+
+/*** EDIT ONE PROFILE  
+router.get('/editProfile/:id', productsController.edit); 
+router.put('/editProfile/:id', validaciones, productsController.update); ***/
+
 
 
 module.exports = router 

@@ -11,13 +11,13 @@ const controlador = {
 
 	// LOGIN USER
 	login: (req, res) => {
-        res.render('./users/login')
+        res.render('users/login')
     },
 
 	// DETAIL PROFILE
 	profile: (req, res) => {
 		
-		let idURL = req.params.id;
+	/*	let idURL = req.params.id;
 		let usuarioEncontrado;
 
 		for (let p of users){
@@ -25,16 +25,16 @@ const controlador = {
 				usuarioEncontrado=p;
 				break;
 			}
-		}
+		} */
 
-		res.render('users/profile',{detallePerfil: usuarioEncontrado});
+		res.render('users/profile' /*,{detallePerfil: usuarioEncontrado}*/);
 
 	},
 
 
     // Form to register
     register: (req,res) => {
-        res.render( './users/register')
+        res.render( 'users/register')
 	},
 
     // Create -  Method to store
@@ -72,7 +72,7 @@ const controlador = {
 
 		fs.writeFileSync(usersFilePath, JSON.stringify(users,null,' '));
 
-		res.redirect('/users/login');
+		res.redirect('users/login');
 
 		
 		}
