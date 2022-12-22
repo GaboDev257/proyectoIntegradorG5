@@ -24,11 +24,11 @@ router.get('/login', usersController.login)
 
 /*** CREATE ONE USER ***/ 
 router.get('/register', usersController.register) 
-router.post('/register', uploadFile.single['imagenUsuario'], usersController.store); 
+// router.post('/register', uploadFile.single['imagenUsuario'], usersController.store); 
 
 /*** EDIT ONE PROFILE ***/ 
 router.get('/profile/:id', usersController.profile); 
-router.put('/profile/:id', usersController.update); 
+// router.put('/profile/:id', usersController.update); 
 
 
 module.exports = router 
