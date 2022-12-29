@@ -5,7 +5,9 @@
   "lastName": "Maldonado",
   "userName": "juancito",
   "email": "jcmaldonado@gmail.com",
-  "birthDate": "20/06/1990"
+  "password": "123456",
+  "birthDate": "20/06/1990",
+  "imageUser": ""
  },
  {
   "id": 2,
@@ -13,7 +15,9 @@
   "lastName": "Gonzales",
   "userName": "maca1999",
   "email": "maca-gonzls@gmail.com",
-  "birthDate": "01/07/1999"
+  "password": "123455",
+  "birthDate": "01/07/1999",
+  "imageUser": ""
  },
  {
   "id": 3,
@@ -21,7 +25,9 @@
   "lastName": "Villagra",
   "userName": "agus-tin",
   "email": "a-villagra@hotmail.com",
-  "birthDate": "13/05/1991"
+  "password": "123456",
+  "birthDate": "13/05/1991",
+  "imageUser": ""
  },
  {
   "id": 4,
@@ -29,7 +35,9 @@
   "lastName": "Perez",
   "userName": "valu123",
   "email": "valuperez@gmail.com",
-  "birthDate": "29/11/2002"
+  "password": "123456",
+  "birthDate": "29/11/2002",
+  "imageUser": ""
  },
  {
   "id": 5,
@@ -37,7 +45,9 @@
   "lastName": "Hernandez",
   "userName": "rochi-h",
   "email": "hernandez.rochi@yahoo.com.ar",
-  "birthDate": "17/08/2005"
+  "password": "123456",
+  "birthDate": "17/08/2005",
+  "imageUser": ""
  },
  {
   "id": 6,
@@ -45,6 +55,8 @@
   "lastName": "Romero",
   "userName": "nacho2001",
   "email": "nachito-romero2001@gmail.com",
-  "birthDate": "05/09/2001"
+  "password": "123456",
+  "birthDate": "05/09/2001",
+  "imageUser": ""
  } 
 ]

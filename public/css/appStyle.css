@@ -250,7 +250,24 @@
     padding: 15px;
   }
   
-/*====== Product Detail ======*/
+/*====== Product Detail and User Detail======*/
+
+.user-img-container {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #FF6565;
+  width: 120px;
+  height: 140px;
+  display: block;
+  margin: auto;
+
+}
+
+.user-img-container img {
+  width: 80px;
+  height: 100px;
+}
 .divizq { 
   display: flex;
   width: 50%;

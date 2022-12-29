@@ -7,10 +7,14 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	// Show all products
-	index: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('products/products',{productos: products})
-	},
+	'index': (req, res) => {
+        db.product.findAll({
+            include: ['category']
+        })
+            .then(product => {
+                res.render('products/products.ejs', {productos:product})
+            })
+    },
 
 	// Detail from one product
 	detail: (req, res) => {

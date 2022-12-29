@@ -14,25 +14,7 @@ const controlador = {
         res.render('users/login')
     },
 
-	// DETAIL PROFILE
-	profile: (req, res) => {
-		
-	/*	let idURL = req.params.id;
-		let usuarioEncontrado;
-
-		for (let p of users){
-			if (p.id==idURL){
-				usuarioEncontrado=p;
-				break;
-			}
-		} */
-
-		res.render('users/profile' /*,{detallePerfil: usuarioEncontrado}*/);
-
-	},
-
-
-    // Form to register
+	// Form to register
     register: (req,res) => {
         res.render( 'users/register')
 	},
@@ -64,6 +46,7 @@ const controlador = {
             lastName: req.body.lastName,
             userName: req.body.userName,
             email: req.body.email,
+			password: req.body.password,
             birthDate: req.body.birthDate,
 			/*image: nombreImagen*/
 		};
@@ -82,6 +65,61 @@ const controlador = {
 	
 		
 	},
+
+	// DETAIL PROFILE
+	profile: (req, res) => {
+		
+	/*	let idURL = req.params.id;
+		let usuarioEncontrado;
+
+		for (let p of users){
+			if (p.id==idURL){
+				usuarioEncontrado=p;
+				break;
+			}
+		} */
+
+		res.render('users/profile' /*,{detallePerfil: usuarioEncontrado}*/);
+
+	},
+
+    // Update - Form to edit
+	edit: (req, res) => {
+
+		/**let id = req.params.id;
+		let productoEncontrado;
+
+		for (let s of products){
+			if (id==s.id){
+				productoEncontrado=s;
+			}
+		}**/
+
+		res.render('users/editProfile' /** ,{ProductoaEditar: productoEncontrado}**/);
+	},
+
+// Update - Method to update
+/**update: (req, res) => {
+	
+	let id = req.params.id;
+	let productoEncontrado;
+
+	for (let s of products){
+		if (id==s.id){
+			s.name= req.body.name;
+			s.price= req.body.price;  
+			s.category= req.body.category;
+			s.description= req.body.description;
+			break;
+		}
+	}
+
+	fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+
+	res.redirect('/');
+},**/
+
+    
     
 
     

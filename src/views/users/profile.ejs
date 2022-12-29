@@ -7,30 +7,29 @@
 	<%- include('../partials/topNavbar') %>
 	<!-- /Header -->
 
-	<!-- product detail -->
+	<!-- user detail -->
 	<div class="container products-wrapper">
 		<div class="product-detail">
 			<div class="row">
-				<div class="row col-lg-6 align-items-center text-center">
+				<div class="user-img-container row col-lg-4 align-items-center text-center mt-4">
 					<div class="col">
-						<img src="/img/products/" alt="user image" class="img-fluid" width="100" height="100">
-				    	<!--<div class="divhearth"><i class="fa-duotone fa-heart"></i></div>-->
+						<img src="/img/company-logo.png" alt="user-image" class="img-fluid">
 					</div> 
-					<!--<div class="divchevron"><i class="fa-sharp fa-solid fa-chevron-right"></i>  </div>--> 
 				</div>
-				<div class="col-12 col-lg-6">
+				
+				<div class="col-12 col-lg-8">
 					<article class="product-detail-info">
 						<div class="product-detail-title">Mi perfil</div>
-						<ul class="text-left">
-							<li>Nombre</li>
-							<li>Apellido</li>
-							<li>Username</li>
-							<li>Email</li>
-							<li>Fecha de nacimiento</li>
+						<ul class="text-left gap-1">
+							<li>Nombre: </li>
+							<li>Apellido: </li>
+							<li>Username: </li>
+							<li>Email: </li>
+							<li>Fecha de nacimiento: </li>
 						</ul>	
 						<div class="divbuttons">
-							<a href="/products/edit/<%=detalleProducto.id %>" class="action-button edit">EDITAR PERFIL</a>
-							<form action="/products/<%=detalleProducto.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
+							<a href="/users/editProfile" class="action-button edit">EDITAR PERFIL</a>
+							<form action="/users/profile?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
 								<button type="submit" class="action-button delete">DAR DE BAJA</button>
 							</form>
 						</div>
