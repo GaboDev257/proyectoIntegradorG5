@@ -19,7 +19,8 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 
 let validaciones = [
-	check('name').notEmpty().withMessage('Complete campo')
+	check('name').notEmpty().withMessage('Complete campo'),
+    check('name').notEmpty().withMessage('Complete campo')
 ];  
 
 
@@ -29,11 +30,11 @@ let validaciones = [
 const productsController = require('../controllers/productsController');
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', validaciones, productsController.index); 
+router.get('/', productsController.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/create', uploadFile.single('imagenProducto'), productsController.store); 
+router.post('/create', uploadFile.single('imagenProducto'),validaciones, productsController.store); 
 
 
 /*** GET ONE PRODUCT ***/ 

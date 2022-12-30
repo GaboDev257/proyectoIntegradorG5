@@ -1,5 +1,5 @@
-const usuariosRoutes = require ('./routes/usuariosRoutes')
-const productsRouter = require ('./routes/productsRouter')
+const usersRouter = require ('./routes/users')
+const productsRouter = require ('./routes/products')
 const homeRoutes = require('./routes/homeRoutes');
 const carritoRoutes = require ('./routes/carritoRoutes');
 
@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 app.use('/', homeRoutes); 
-app.use('/users', usuariosRoutes);
+app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/shoppingCart', carritoRoutes);
 

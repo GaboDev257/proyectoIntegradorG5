@@ -1,143 +1,112 @@
-const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 const { validationResult } = require('express-validator')
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const Products = db.product;
+const Categories = db.category;
+const Users = db.user;
 
 const controller = {
 	// Show all products
 	index: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('products/products',{productos: products})
-	},
+        db.product.findAll({
+            include: ['category']
+        })
+            .then(product => {
+                res.render('products/products.ejs', {productos:product})
+            })
+    },
 
 	// Detail from one product
 	detail: (req, res) => {
-		
-		let idURL = req.params.id;
-		let productoEncontrado;
-
-		for (let p of products){
-			if (p.id==idURL){
-				productoEncontrado=p;
-				break;
-			}
-		}
-
-		res.render('products/productDescription',{detalleProducto: productoEncontrado});
-
-	},
+        db.product.findByPk(req.params.id,
+            {
+                include : ['category']
+            })
+            .then(product => {
+                res.render('products/productDescription.ejs',{detalleProducto: product});
+            });
+    },
 
 
 	// Form to create
 	create: (req, res) => {
-		res.render('products/newProductForm');
+		let promCategories = Categories.findAll();
+        let promUsers = Users.findAll();
+        
+        Promise
+        .all([promCategories, promUsers])
+        .then(([allCategories, allUsers]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'products/newProductForm.ejs'), {allCategories,allUsers})})
+        .catch(error => res.send(error));
 	},
 	
 	// Create -  Method to store
-	store: (req, res) => {
-
-		let errors = validationResult(req);
-		console.log("errors ", errors)
-
-		if ( errors.isEmpty() ) {
-
-			idNuevo=0;
-
-		for (let s of products){
-			if (idNuevo<s.id){
-				idNuevo=s.id;
-			}
-		}
-
-		idNuevo++;
+	store: (req,res) => {
 
 		let nombreImagen = req.file.filename;
 
-
-		let productoNuevo =  {
-			id:   idNuevo,
-			name: req.body.name ,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description,
-			image: nombreImagen
-		};
-
-		products.push(productoNuevo);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
-
-		res.redirect('/');
-
-		
-		}
-		else{
-			res.render('products/newProductForm', {errors: errors.array() } ); 
-		}
+        Products.create(
+            {
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                create_date: new Date(),
+				image: nombreImagen,
+                category_id: req.body.category_id,
+				user_id: '2'
+            }
+        )
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error))
+    },
 	
-		
-	},
 
 	// Update - Form to edit
-		edit: (req, res) => {
-
-			let id = req.params.id;
-			let productoEncontrado;
-	
-			for (let s of products){
-				if (id==s.id){
-					productoEncontrado=s;
-				}
-			}
-	
-			res.render('products/editProduct',{ProductoaEditar: productoEncontrado});
-		},
-
-	// Update - Method to update
-	update: (req, res) => {
-		
-		let id = req.params.id;
-		let productoEncontrado;
-
-		for (let s of products){
-			if (id==s.id){
-				s.name= req.body.name;
-				s.price= req.body.price;
-				s.category= req.body.category;
-				s.description= req.body.description;
-				break;
-			}
-		}
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
-
-		res.redirect('/');
+	edit: (req, res) => {
+		let promProducts = Products.findByPk(req.params.id, {include : ['category']});
+		let promCategories = Categories.findAll();
+        let promUsers = Users.findAll();
+        
+        Promise
+        .all([promProducts, promCategories, promUsers])
+        .then(([product, allCategories, allUsers]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'products/editProduct.ejs'), {ProductoaEditar:product, allCategories, allUsers})})
+        .catch(error => res.send(error));
 	},
 
+	// Update - Method to update
+	update: (req,res) => {
+        let productId = Products.findByPk(req.params.id, {include : ['category']});
+
+        Products.update(
+            {
+                name: req.body.name,
+                price: req.body.price,
+                category_id: req.body.category_id,
+				description: req.body.description,
+                update_date: new Date(),
+            },
+            {
+                where: {id:productId}
+            })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error))
+    },
+
 	// Delete - Delete one product from DB
-	erase : (req, res) => {
+	erase: (req,res) => {
+        let productId = req.params.id;
 
-		let id = req.params.id;
-		let ProductoEncontrado;
-
-		let Nproducts = products.filter(function(e){
-			return id!=e.id;
-		})
-
-		for (let producto of products){
-			if (producto.id == id){
-			    ProductoEncontrado=producto;
-			}
-		}
-
-		fs.unlinkSync(path.join(__dirname, '../../public/img/products/', ProductoEncontrado.image));
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
-
-		res.redirect('/');
-		}
+    Products.erase(
+		{where: {id: productId}, force: true}
+		) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/')})
+        .catch(error => res.send(error)) 
+    }
 	
 };
 

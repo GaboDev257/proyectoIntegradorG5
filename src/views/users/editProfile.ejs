@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'Editar perfil' }) %>
+<body>
+	<!-- Header -->
+	<%- include('../partials/topNavbar') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12 pb-5">
+				<div id="section-tittle">Editar Perfil</div>
+			</div>
+		</div>
+		<div class="col-12"> 
+			<form action="">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre</label>
+						<input value="<%=perfilaEditar.name %>" type="text" id="name" name="name" placeholder="Ej: Luis" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="last_name" class="form-label">Apellido</label>
+						<input value="<%=perfilaEditar.last_name %>" type="text" id="last_name" name="last_name" placeholder="Ej: Perez" class="form-input">
+					</div>
+                    <div class="col-12 col-md-6">
+						<label for="user_name" class="form-label">Nombre de usuario</label>
+						<input value="<%=perfilaEditar.user_name %>" type="text" id="user_name" name="user_name" placeholder="Ej: Luipe123" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="birth_date" class="form-label">Fecha de nacimiento</label>
+						<input value="<%=perfilaEditar.birth_date %>" type="date" id="birth_date" name="birth_date" placeholder="dd/mm/aaaa" class="form-input">
+					</div>
+                    <div class="col-12 col-md-6">
+						<label for="email" class="form-label">Correo electrónico</label>
+						<input value="<%=perfilaEditar.email %>" type="email" id="email" name="email" placeholder="email@email.com" class="form-input">
+					</div>
+                    <div class="col-12 col-md-6 ">
+						<label for="image_user" class="form-label">Imagen de perfil</label>
+						<input type="file" id="image_user" name="image_user" class="form-input"/>
+					</div>
+                    <div class="col-12">
+                        <p>Deseas cambiar la contraseña?</p>
+						<% let checked='checked' %>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                            Si
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                            No
+                            </label>
+                        </div>
+                    </div>
+                    <% if (checked) { %>
+					<div class="col-12 col-md-6">
+						<label for="password" class="form-label">Nueva contraseña</label>
+						<input type="password" id="password" name="password" placeholder="" class="form-input">
+					</div>
+                    <div class="col-12 col-md-6">
+						<label for="password" class="form-label">Confirmar nueva contraseña</label>
+						<input type="password" id="password" name="password" placeholder="" class="form-input">
+					</div>
+                    <% } else { %> 
+                        ''
+                    <% } %>
+					<div class="divbutton">
+						<button type="submit" class="btn buttoncart">Guardar cambios</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

@@ -1,1 +1,1 @@
-Concluciones de retrospectiva.
+Conclusiones de retrospectiva.

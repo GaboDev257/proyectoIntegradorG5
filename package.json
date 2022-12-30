@@ -1,5 +1,5 @@
 {
-  "name": "proyectointegradorgrupo5",
+  "name": "proyectointegradorg5",
   "version": "1.0.0",
   "description": "Repositorio del proyecto integrador de Digital House, correspondiente al grupo 5.",
   "main": "index.js",
@@ -9,26 +9,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juaniordonez/proyectointegradorgrupo5.git"
+    "url": "git+https://github.com/gaboaguirre2215/proyectoIntegradorG5.git"
   },
   "author": "Grupo 5",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/juaniordonez/proyectointegradorgrupo5/issues"
+    "url": "https://github.com/gaboaguirre2215/proyectoIntegradorG5/issues"
   },
-  "homepage": "https://github.com/juaniordonez/proyectointegradorgrupo5#readme",
+  "homepage": "https://github.com/gaboaguirre2215/proyectoIntegradorG5#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
+    "ejs-lint": "^2.0.0",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "express-validator": "^6.14.2",
     "http-errors": "^2.0.0",
+    "lodash": "^4.17.21",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^2.0.20"
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.5.2"
   },
   "keywords": []
 }
