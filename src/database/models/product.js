@@ -19,19 +19,23 @@ function productData (sequelize, Datatypes) {
             type: Datatypes.STRING(600),
             allowNull: false
         },
-        /*image: {
-            type: dataTypes.STRING,
+        image: {
+            type: Datatypes.STRING(500),
             allowNull: false
-        },*/
+        },
         create_date: {
-            type: Datatypes.DATEONLY,
+            type: Datatypes.DATE,
             allowNull: false
+        },
+        update_date: {
+            type: Datatypes.DATE,
+            allowNull: true
         },
         category_id: Datatypes.BIGINT(10),
         user_id: Datatypes.BIGINT(10)
     };
     let config = {
-        timestamps: true,
+        timestamps: false,
     }
     const product = sequelize.define(alias,cols,config);
 
@@ -41,10 +45,10 @@ function productData (sequelize, Datatypes) {
             foreignKey: "category_id"
         })
 
-        product.belongsTo(models.user, { // models.Actor -> Actors es el valor de alias en actor.js
+        /*product.belongsTo(models.user, { // models.Actor -> Actors es el valor de alias en actor.js
             as: "user",
             foreignKey: 'user_id',
-        })
+        })*/
     }
 
     return product

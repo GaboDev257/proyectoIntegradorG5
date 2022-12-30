@@ -30,15 +30,15 @@ router.get('/login', usersController.login)
 /*** CREATE ONE USER ***/ 
 router.get('/register', usersController.register) 
 router.post('/register', usersController.store); 
-/*router.post('/register', uploadFile.single('imagenUsuario'), usersController.store); */
 
 /*** DETAIL PROFILE ***/ 
 router.get('/profile', usersController.profile); 
 
 /*** EDIT ONE PROFILE  ***/
 router.get('/editProfile', usersController.edit); 
-/***router.put('/editProfile/:id', validaciones, productsController.update); ***/
+//router.put('/editProfile/:id', uploadFile.single('imagenUsuario'), validaciones, usersController.update);
 
-
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/:id', usersController.erase); 
 
 module.exports = router 

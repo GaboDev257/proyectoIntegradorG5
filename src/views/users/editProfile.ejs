@@ -18,27 +18,27 @@
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Dulces encantados" class="form-input">
+						<input value="<%=perfilaEditar.name %>" type="text" id="name" name="name" placeholder="Ej: Luis" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="lastName" class="form-label">Apellido</label>
-						<input type="text" id="lastName" name="lastName" placeholder="Ej: 5678" class="form-input">
+						<label for="last_name" class="form-label">Apellido</label>
+						<input value="<%=perfilaEditar.last_name %>" type="text" id="last_name" name="last_name" placeholder="Ej: Perez" class="form-input">
 					</div>
                     <div class="col-12 col-md-6">
-						<label for="userName" class="form-label">Nombre de usuario</label>
-						<input type="text" id="userName" name="userName" placeholder="Ej: Dulces encantados" class="form-input">
+						<label for="user_name" class="form-label">Nombre de usuario</label>
+						<input value="<%=perfilaEditar.user_name %>" type="text" id="user_name" name="user_name" placeholder="Ej: Luipe123" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="birthDat" class="form-label">Fecha de nacimiento</label>
-						<input type="date" id="birthDate" name="birthDate" placeholder="Ej: 5678" class="form-input">
+						<label for="birth_date" class="form-label">Fecha de nacimiento</label>
+						<input value="<%=perfilaEditar.birth_date %>" type="date" id="birth_date" name="birth_date" placeholder="dd/mm/aaaa" class="form-input">
 					</div>
                     <div class="col-12 col-md-6">
 						<label for="email" class="form-label">Correo electrónico</label>
-						<input type="email" id="email" name="email" placeholder="Ej: 5678" class="form-input">
+						<input value="<%=perfilaEditar.email %>" type="email" id="email" name="email" placeholder="email@email.com" class="form-input">
 					</div>
                     <div class="col-12 col-md-6 ">
-						<label for="imagenUser" class="form-label">Imagen de perfil</label>
-						<input type="file" id="imagenUser" name="imagenUser" class="form-input"/>
+						<label for="image_user" class="form-label">Imagen de perfil</label>
+						<input type="file" id="image_user" name="image_user" class="form-input"/>
 					</div>
                     <div class="col-12">
                         <p>Deseas cambiar la contraseña?</p>
@@ -59,11 +59,11 @@
                     <% if (checked) { %>
 					<div class="col-12 col-md-6">
 						<label for="password" class="form-label">Nueva contraseña</label>
-						<input type="password" id="password" name="password" placeholder="Ej: Dulces encantados" class="form-input">
+						<input type="password" id="password" name="password" placeholder="" class="form-input">
 					</div>
                     <div class="col-12 col-md-6">
 						<label for="password" class="form-label">Confirmar nueva contraseña</label>
-						<input type="password" id="password" name="password" placeholder="Ej: Dulces encantados" class="form-input">
+						<input type="password" id="password" name="password" placeholder="" class="form-input">
 					</div>
                     <% } else { %> 
                         ''

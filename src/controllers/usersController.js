@@ -1,10 +1,9 @@
-const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
+const db = require('../database/models');
 
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const Users = db.user;
 
 const controlador = {
 	// ALL USERS
@@ -16,112 +15,88 @@ const controlador = {
 
 	// Form to register
     register: (req,res) => {
-        res.render( 'users/register')
+        let promUsers = Users.findAll();
+        
+        Promise
+        .all([promUsers])
+        .then(([allUsers]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'users/register.ejs'), {allUsers})})
+        .catch(error => res.send(error));
 	},
 
     // Create -  Method to store
-    store: (req, res) => {
+    store: (req,res) => {
 
-		let errors = validationResult(req);
-		console.log("errors ", errors)
-
-		if ( errors.isEmpty() ) {
-
-			idNuevo=0;
-
-		for (let u of users){
-			if (idNuevo<u.id){
-				idNuevo=u.id;
-			}
-		}
-
-		idNuevo++;
-
-		/*let nombreImagen = req.file.filename;*/
-
-
-		let usuarioNuevo =  {
-			id: idNuevo,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            userName: req.body.userName,
-            email: req.body.email,
-			password: req.body.password,
-            birthDate: req.body.birthDate,
-			/*image: nombreImagen*/
-		};
-
-		users.push(usuarioNuevo);
-
-		fs.writeFileSync(usersFilePath, JSON.stringify(users,null,' '));
-
-		res.redirect('users/login');
-
-		
-		}
-		else{
-			res.render('users/register', {errors: errors.array() } ); 
-		}
-	
-		
-	},
+        Users.store(
+            {
+                name: req.body.name,
+                last_name: req.body.last_name,
+                user_name: req.body.user_name,
+				email: req.body.email,
+				password: req.body.password,
+                create_date: new Date(),
+			
+            }
+        )
+        .then(()=> {
+            return res.redirect('/users/login')})            
+        .catch(error => res.send(error))
+    },
 
 	// DETAIL PROFILE
 	profile: (req, res) => {
-		
-	/*	let idURL = req.params.id;
-		let usuarioEncontrado;
-
-		for (let p of users){
-			if (p.id==idURL){
-				usuarioEncontrado=p;
-				break;
-			}
-		} */
-
-		res.render('users/profile' /*,{detallePerfil: usuarioEncontrado}*/);
-
-	},
+        db.user.findByPk('2')
+            .then(user => {
+                res.render('users/profile.ejs',{detallePerfil: user});
+            });
+    },
 
     // Update - Form to edit
 	edit: (req, res) => {
-
-		/**let id = req.params.id;
-		let productoEncontrado;
-
-		for (let s of products){
-			if (id==s.id){
-				productoEncontrado=s;
-			}
-		}**/
-
-		res.render('users/editProfile' /** ,{ProductoaEditar: productoEncontrado}**/);
-	},
+		db.user.findByPk('2')
+		.then(user => {
+			res.render('users/editProfile.ejs',{perfilaEditar: user});
+		});
+    },
 
 // Update - Method to update
-/**update: (req, res) => {
+    update: (req, res) => {
 	
-	let id = req.params.id;
-	let productoEncontrado;
+		let nombreImagen = req.file.filename;
+	    let userId = db.user.findByPk('2');
+	    
 
-	for (let s of products){
-		if (id==s.id){
-			s.name= req.body.name;
-			s.price= req.body.price;  
-			s.category= req.body.category;
-			s.description= req.body.description;
-			break;
-		}
-	}
+		Users.update(
+            {
+                name: req.body.name,
+                last_name: req.body.last_name,
+                user_name: req.body.user_name,
+				birth_date: req.body.birth_date,
+				email: req.body.email,
+				image_user: nombreImagen,
+				password: req.body.password,
+                update_date: new Date(),
+            },
+			{
+				where: {id:userId}
+			}
+        )
+        .then(()=> {
+            return res.redirect('/users/login')})            
+        .catch(error => res.send(error))
+    },
 
-	fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+	// delete - Method to delete user
+	erase: (req,res) => {
+        let userId = req.params.id;
 
-	res.redirect('/');
-},**/
-
-    
-    
-
+    db.user.erase(
+		{where: {id: userId}, force: true}
+		) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/')})
+        .catch(error => res.send(error)) 
+    }
     
 }
 

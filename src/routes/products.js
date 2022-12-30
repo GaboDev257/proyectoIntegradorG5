@@ -19,7 +19,8 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 
 let validaciones = [
-	check('name').notEmpty().withMessage('Complete campo')
+	check('name').notEmpty().withMessage('Complete campo'),
+    check('name').notEmpty().withMessage('Complete campo')
 ];  
 
 

@@ -7,15 +7,13 @@ function categoryData (sequelize, Datatypes) {
             allowNull: false,
             autoIncrement: true
         },
-        //created_at: dataTypes.TIMESTAMP,
-        //updated_at: dataTypes.TIMESTAMP,
         name: {
             type: Datatypes.STRING(100),
             allowNull: false
         },
     };
     let config = {
-        timestamps: true,
+        timestamps: false,
     }
     const category = sequelize.define(alias, cols, config);
 

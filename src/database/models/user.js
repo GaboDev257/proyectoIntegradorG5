@@ -6,8 +6,6 @@ function userData (sequelize, dataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        //created_at: dataTypes.TIMESTAMP,
-        //updated_at: dataTypes.TIMESTAMP,
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -29,16 +27,24 @@ function userData (sequelize, dataTypes) {
             allowNull: false
         },
         birth_date: {
-            type: dataTypes.DATEONLY,
+            type: dataTypes.DATE,
             allowNull: false
         },
-        /*image_user: {
+        image_user: {
             type: dataTypes.STRING,
+            allowNull: true
+        },
+        create_date: {
+            type: dataTypes.DATE,
             allowNull: false
-        },*/
+        },
+        update_date: {
+            type: dataTypes.DATE,
+            allowNull: true
+        },
     };
     let config = {
-        timestamps: true,
+        timestamps: false,
     }
     const user = sequelize.define(alias, cols, config); 
 

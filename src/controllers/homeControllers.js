@@ -6,7 +6,7 @@ const homeControllers = {
             include: ['category']
         })
             .then(product => {
-                res.render('home.ejs', {product})
+                res.render('home.ejs', {productos:product})
             })
     },
 };
