@@ -26,3 +26,5 @@ app.use('/shoppingCart', carritoRoutes);
 app.listen(process.env.PORT || 3000, function() {
     console.log('Servidor corriendo')
 });
+
+module.exports = app;
