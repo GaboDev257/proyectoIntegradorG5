@@ -15,7 +15,7 @@
                         <h5>Más vendidos</h5>
                       </div>                      
                       <div>
-                        <% for (let i=0;i<productos.length;i++) { %>
+                          <% for (let i=0;i<productos.length;i++) { %> <% if (productos[i].category.id == '100') { %> 
                         <div class="text-center my-4">
                           <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="imagen de producto"></a>
                         </div>
@@ -25,10 +25,10 @@
                         <div id="price-home">
                           <p>$ <%= productos[i].price %></p>
                         </div>
-                        <% } %> 
+                        <% } %> <% } %> 
                       </div>
-                      <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button>
+                      <div class="d-flex justify-content-center"><a href="/products">
+                        <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button></a>
                       </div>                       
                     </div>                        
                   </div>
@@ -38,7 +38,7 @@
                         <h5>¡Encuentra tu casa!</h5>
                       </div>
                       <div>
-                        <% for (let i=0;i<productos.length;i++) { %>
+                        <% for (let i=0;i<productos.length;i++) { %> <% if (productos[i].category.id == '101') { %> 
                         <div class="text-center my-4">
                           <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="imagen de producto"></a>
                         </div> 
@@ -48,10 +48,10 @@
                         <div id="price-home">
                           <p>$ <%= productos[i].price %></p>
                         </div>
-                        <% } %> 
+                        <% } %> <% } %> 
                       </div>
-                        <div class="d-flex justify-content-center">
-                          <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button>
+                        <div class="d-flex justify-content-center"><a href="/products">
+                          <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button></a>
                         </div>                         
                     </div>
                   </div>
@@ -61,7 +61,7 @@
                         <h5>Nuevos ingresos</h5>
                       </div>
                       <div>
-                        <% for (let i=0;i<productos.length;i++) { %>
+                        <% for (let i=0;i<productos.length;i++) { %> <% if (productos[i].category.id == '102') { %> 
                         <div class="text-center my-4">
                           <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="imagen de producto"></a>
                         </div>
@@ -71,10 +71,10 @@
                         <div id="price-home">
                           <p>$ <%= productos[i].price %></p>
                         </div>
-                        <% } %> 
+                        <% } %> <% } %> 
                       </div>
-                        <div class="d-flex justify-content-center">
-                          <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button>
+                        <div class="d-flex justify-content-center"><a href="/products">
+                          <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button></a>
                         </div> 
                     </div>
                   </div>                  

@@ -1,5 +1,5 @@
 const path = require('path');
-const { validationResult } = require('express-validator')
+//const { validationResult } = require('express-validator')
 const db = require('../database/models');
 
 
@@ -14,12 +14,12 @@ const controlador = {
     },
 
 	// Form to register
-    register: (req,res) => {
+    create: (req,res) => {
         let promUsers = Users.findAll();
         
         Promise
-        .all([promUsers])
-        .then(([allUsers]) => {
+        .all([ promUsers])
+        .then(([ allUsers]) => {
             return res.render(path.resolve(__dirname, '..', 'views',  'users/register.ejs'), {allUsers})})
         .catch(error => res.send(error));
 	},
@@ -27,7 +27,7 @@ const controlador = {
     // Create -  Method to store
     store: (req,res) => {
 
-        Users.store(
+        Users.create(
             {
                 name: req.body.name,
                 last_name: req.body.last_name,
@@ -87,10 +87,10 @@ const controlador = {
     },
 
 	// delete - Method to delete user
-	erase: (req,res) => {
+	destroy: (req,res) => {
         let userId = req.params.id;
 
-    db.user.erase(
+    Users.destroy(
 		{where: {id: userId}, force: true}
 		) // force: true es para asegurar que se ejecute la acción
         .then(()=>{
