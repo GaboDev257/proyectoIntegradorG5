@@ -18,7 +18,7 @@ function categoryData (sequelize, Datatypes) {
     const category = sequelize.define(alias, cols, config);
 
     category.associate = function(models) {
-        category.hasMany(models.product, { // models.Movies -> Movie es el valor de alias en movie.js
+        category.hasMany(models.product, { // models.product -> product es el valor de alias en product.js
             as: "products", // El nombre del modelo pero en plural
             foreignKey: "category_id"
         })

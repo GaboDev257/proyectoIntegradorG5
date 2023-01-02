@@ -40,12 +40,12 @@ function productData (sequelize, Datatypes) {
     const product = sequelize.define(alias,cols,config);
 
     product.associate = function (models) {
-        product.belongsTo(models.category, { // models.Genre -> Genres es el valor de alias en genres.js
+        product.belongsTo(models.category, { 
             as: "category",
             foreignKey: "category_id"
         })
 
-        /*product.belongsTo(models.user, { // models.Actor -> Actors es el valor de alias en actor.js
+        /*product.belongsTo(models.user, { 
             as: "user",
             foreignKey: 'user_id',
         })*/

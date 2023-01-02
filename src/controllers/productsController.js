@@ -97,10 +97,10 @@ const controller = {
     },
 
 	// Delete - Delete one product from DB
-	erase: (req,res) => {
+	destroy: (req,res) => {
         let productId = req.params.id;
 
-    Products.erase(
+    Products.destroy(
 		{where: {id: productId}, force: true}
 		) // force: true es para asegurar que se ejecute la acción
         .then(()=>{

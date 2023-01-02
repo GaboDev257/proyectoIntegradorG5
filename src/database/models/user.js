@@ -49,7 +49,7 @@ function userData (sequelize, dataTypes) {
     const user = sequelize.define(alias, cols, config); 
 
     user.associate = function (models) {
-        user.hasMany(models.product, { // models.Movie -> Movies es el valor de alias en movie.js
+        user.hasMany(models.product, { 
             as: "products",
             foreignKey: 'user_id',
         })
