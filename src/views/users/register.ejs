@@ -23,74 +23,121 @@
             <div class="col-10 registerform">
                 <div class="mb-2">
                     <label for="name" class="form-label">Nombre</label>
-                    <input type="text" id="name" name="name"  class="form-control"  placeholder="Nombre/s">
-
-                    <% if (locals.errors) && errors.name { %>
-                      <div class="text-danger">
-                       <%= errors.name.msg %>
-                      </div>
-
-                    <%  }  %>  
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name"  
+                        class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"  
+                        placeholder="Nombre/s"
+                        value = "<%=   locals.oldData ? oldData.name : null %>">
+                   
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                         <%= errors.name.msg %>
+                        </div>
+  
+                      <%  }  %>  
+  
+     
 
                 </div>
                 <div class="mb-2">
                     <label for="last_name" class="form-label">Apellido</label>
-                    <input type="text" id="last_name" name="last_name"   class="form-control"  placeholder="Apellido/s">
-                    <% if (locals.errors) && errors.last_name { %>
+                    <input 
+                       type="text" 
+                       id="last_name" 
+                       name="last_name"   
+                       class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+                       placeholder="Apellido/s"
+                       value = "<%=   locals.oldData ? oldData.last_name : null %>">
+                    
+                    <% if (locals.errors && errors.last_name) { %>
                         <div class="text-danger">
                          <%= errors.last_name.msg %>
                         </div>
   
                       <%  }  %>  
+  
 
 
                 </div>
                 <div class="mb-2">
                     <label for="user_name" class="form-label">Username</label>
-                    <input type="text"  id="user_name" name="user_name" class="form-control"  placeholder="nickname">
+                    <input 
+                      type="text"  
+                      id="user_name" 
+                      name="user_name" 
+                      class="form-control <%= locals.errors && errors.user_name ? 'is-invalid' : null %>"  
+                      placeholder="nickname"
+                      value = "<%=   locals.oldData ? oldData.user_name : null %>">
 
-                    <% if (locals.errors) && errors.user_name { %>
+                    <% if (locals.errors && errors.user_name) { %>
                         <div class="text-danger">
                          <%= errors.user_name.msg %>
                         </div>
   
                       <%  }  %>  
+  
 
 
                 </div>
                 <div class="mb-2">
                     <label for="email" class="form-label">Correo Electronico</label>
-                    <input type="email"  id="email" name="email" class="form-control"  placeholder="name@example.com">
-
-                    <% if (locals.errors) && errors.email { %>
+                    <input 
+                       type="email"  
+                       id="email" 
+                       name="email" 
+                       class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                       placeholder="name@example.com"
+                       value = "<%=   locals.oldData ? oldData.email : null %>">
+               
+                    <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
                          <%= errors.email.msg %>
                         </div>
   
                       <%  }  %>  
+  
+              
 
                 </div>
                 <div class="mb-2">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" id="password" name="password" class="form-control"  placeholder="Password">
-
-                    <% if (locals.errors) && errors.password { %>
+                    <input 
+                       type="password" 
+                       id="password" 
+                       name="password" 
+                       class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                       placeholder="Password"
+                       value = "<%=   locals.oldData ? oldData.password : null %>">
+                
+                    <% if (locals.errors && errors.password) { %>
                         <div class="text-danger">
                          <%= errors.password.msg %>
                         </div>
   
                       <%  }  %>  
+  
+ 
 
                 </div>
                 <div class="mb-2">
                     <label for="password" class="form-label">Confirmar Contraseña</label>
-                    <input type="password" id="password" name="confirm-password" class="form-control"  placeholder="Password">
-                      <% if (locals.errors) && errors.confirm-password { %>
+                    <input 
+                       type="password" 
+                       id="password" 
+                       name="confirm-password" 
+                       class="form-control <%= locals.errors && errors.confirm-password ? 'is-invalid' : null %>"  
+                       placeholder="Password"
+                       value = "<%=   locals.oldData ? oldData.confirm-password : null %>">
+
+                      <% if (locals.errors && errors.confirm-password) { %>
                         <div class="text-danger">
                          <%= errors.confirm-password.msg %>
                         </div>
   
                       <%  }  %>  
+
 
                 </div>  
             </div>

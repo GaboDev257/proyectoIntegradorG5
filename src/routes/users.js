@@ -23,15 +23,23 @@ const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
     body('last_name').notEmpty().withMessage('Tienes que escribir un apeliido'),
     body('user_name').notEmpty().withMessage('Tienes que elegir un usuario'),
-    body('email').notEmpty().withMessage('Tienes que escribir un correo electronico'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('confirm-password').notEmpty().withMessage('Tienes que confirmar la contraseña'),
+    body('email')
+       .notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
+       .isEmail().withMessage('El formato de correo ingresado es inváido'),
+    body('password')
+       .notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+       .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
+    body('confirm-password')
+       .notEmpty().withMessage('Tienes que confirmar la contraseña').bail()
+       .custom ((value,{req}) => {
+          if (value != locals.password ) {
+            return Promise.reject ('Las contraseñas no coinciden')
+          }
+        return true;
+
+       }),
 ];
 
-
-/*let validaciones = [
-	check('name').notEmpty().withMessage('Complete campo')
-];  */
 
 
 /*** LOGIN USER ***/

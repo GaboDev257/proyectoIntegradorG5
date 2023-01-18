@@ -6,7 +6,7 @@ const carritoRoutes = require ('./routes/carritoRoutes');
 
 const express = require('express');
 const path = require('path');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 const app = express();
 
 const publicPath = path.resolve(__dirname, '../public');
