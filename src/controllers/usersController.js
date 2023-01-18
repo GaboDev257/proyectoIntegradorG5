@@ -1,5 +1,5 @@
 const path = require('path');
-//const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 
@@ -23,6 +23,20 @@ const controlador = {
             return res.render(path.resolve(__dirname, '..', 'views',  'users/register.ejs'), {allUsers})})
         .catch(error => res.send(error));
 	},
+
+    processRegister:(req,res) => {
+       const resultValidation = validationResult(req);
+
+       if (resultValidation.errors.length > 0)  {
+        return res.render('register',{
+            errors: resultValidation.mapped(),
+        });
+
+       }
+
+     },
+
+    
 
     // Create -  Method to store
     store: (req,res) => {
