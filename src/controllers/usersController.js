@@ -13,6 +13,20 @@ const controlador = {
         res.render('users/login')
     },
 
+    validationLogin :(req,res) => {
+        const resultValidation = validationResult(req);
+ 
+        if (resultValidation.errors.length > 0)  {
+         return res.render('users/login',{
+             errors: resultValidation.mapped(),
+             oldData: req.body,
+         });
+ 
+        }
+ 
+      },
+
+
 	// Form to register
     create: (req,res) => {
         let promUsers = Users.findAll();
@@ -26,16 +40,17 @@ const controlador = {
 
     processRegister:(req,res) => {
        const resultValidation = validationResult(req);
+       console.log(resultValidation.mapped());
 
        if (resultValidation.errors.length > 0)  {
-        return res.render('register',{
+        return res.render('users/register',{
             errors: resultValidation.mapped(),
             oldData: req.body,
         });
 
-       }
+       }   console.log(resultValidation);
 
-     },
+     }, 
 
     
 

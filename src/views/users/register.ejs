@@ -106,14 +106,14 @@
                     <input 
                        type="password" 
                        id="password" 
-                       name="password" 
-                       class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                       name="clave" 
+                       class="form-control <%= locals.errors && errors.clave ? 'is-invalid' : null %>"
                        placeholder="Password"
-                       value = "<%=   locals.oldData ? oldData.password : null %>">
+                       value = "<%=   locals.oldData ? oldData.clave : null %>">
                 
-                    <% if (locals.errors && errors.password) { %>
+                    <% if (locals.errors && errors.clave) { %>
                         <div class="text-danger">
-                         <%= errors.password.msg %>
+                         <%= errors.clave.msg %>
                         </div>
   
                       <%  }  %>  
@@ -126,14 +126,14 @@
                     <input 
                        type="password" 
                        id="password" 
-                       name="confirm-password" 
-                       class="form-control <%= locals.errors && errors.confirm-password ? 'is-invalid' : null %>"  
+                       name="confirmpassword" 
+                       class="form-control <%= locals.errors && errors.confirmpassword ? 'is-invalid' : null %>"  
                        placeholder="Password"
-                       value = "<%=   locals.oldData ? oldData.confirm-password : null %>">
+                       value = "<%=   locals.oldData ? oldData.confirmpassword : null %>">
 
-                      <% if (locals.errors && errors.confirm-password) { %>
+                      <% if (locals.errors && errors.confirmpassword) { %>
                         <div class="text-danger">
-                         <%= errors.confirm-password.msg %>
+                         <%= errors.confirmpassword.msg %>
                         </div>
   
                       <%  }  %>  

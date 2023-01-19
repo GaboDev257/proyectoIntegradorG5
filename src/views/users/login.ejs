@@ -22,14 +22,51 @@
         <a href="/" ><img src="/img/company-logo.png"></a>
       </div>
       <div class="contenedor-form">          
-        <form>
+        <form action="/users/login" method="POST" enctype="multipart/form-data" >
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"><strong>Email</strong></label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                    <div id="emailHelp" class="form-text"></div>
+            <input 
+               type="email" 
+               class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+               id="exampleInputEmail1" 
+               name="email"
+               aria-describedby="emailHelp"                    
+               value = "<%=   locals.oldData ? oldData.email : null %>">
+               
+               <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                 <%= errors.email.msg %>
+                </div>
+
+               <%  }  %> 
+
+               <div id="emailHelp" class="form-text"></div>
+          
+          
+          
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"><strong>Contraseña</strong></label>
-            <input type="password"  class="form-control" id="exampleInputPassword1">
+            <input 
+              type="password"  
+              class="form-control  <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+              id="exampleInputPassword1"
+              name="clave"
+              value = "<%=   locals.oldData ? oldData.email : null %>">
+             
+              <% if (locals.errors && errors.clave) { %>
+                <div class="text-danger">
+                 <%= errors.clave.msg %>
+                </div>
+
+              <%  }  %> 
+
+               <div id="emailHelp" class="form-text"></div>
+
+
+
+
+
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

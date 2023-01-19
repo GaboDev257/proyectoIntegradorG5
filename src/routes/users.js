@@ -4,7 +4,6 @@ const express = require ('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-//const { check } = require('express-validator');
 const { body } = require('express-validator');
 
 const multerDiskStorage = multer.diskStorage({
@@ -24,13 +23,13 @@ const validations = [
     body('last_name').notEmpty().withMessage('Tienes que escribir un apeliido'),
     body('user_name').notEmpty().withMessage('Tienes que elegir un usuario'),
     body('email')
-       .notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
+       .notEmpty().withMessage('Tienes que escribir un correo electronico')
        .isEmail().withMessage('El formato de correo ingresado es inváido'),
-    body('password')
-       .notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+    body('contraseña')
+       .notEmpty().withMessage('Tienes que escribir una contraseña')
        .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
-    body('confirm-password')
-       .notEmpty().withMessage('Tienes que confirmar la contraseña').bail()
+    body('confirmpassword')
+       .notEmpty().withMessage('Tienes que confirmar la contraseña')
        .custom ((value,{req}) => {
           if (value != locals.password ) {
             return Promise.reject ('Las contraseñas no coinciden')
@@ -40,14 +39,25 @@ const validations = [
        }),
 ];
 
+const validations2 = [
+    body('email')
+       .notEmpty().withMessage('Tienes que escribir un correo electronico')
+       .isEmail().withMessage('El formato de correo ingresado es inváido'),
+    body('clave')
+       .notEmpty().withMessage('Tienes que escribir una contraseña')
+       .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
+
+];
 
 
 /*** LOGIN USER ***/
 router.get('/login', usersController.login)
+router.post('/login', validations2 ,usersController.validationLogin)
+
 
 /*** CREATE ONE USER ***/ 
 router.get('/register', usersController.create) 
-router.post('/register', validations ,usersController.store); 
+router.post('/register', validations ,usersController.processRegister); 
 
 /*** DETAIL PROFILE ***/ 
 router.get('/profile', usersController.profile); 
