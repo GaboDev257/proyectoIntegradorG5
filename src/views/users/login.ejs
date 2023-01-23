@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/normalize.css">
+    <script src = "../js/validacionesJSfront.js" > </script>
+
 </head>
 <body>
   <div class="contenedor-padre">
@@ -27,7 +29,7 @@
             <label for="exampleInputEmail1" class="form-label"><strong>Email</strong></label>
             <input 
                type="email" 
-               class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+               class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> correo" 
                id="exampleInputEmail1" 
                name="email"
                aria-describedby="emailHelp"                    
@@ -49,7 +51,7 @@
             <label for="exampleInputPassword1" class="form-label"><strong>Contraseña</strong></label>
             <input 
               type="password"  
-              class="form-control  <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+              class="form-control  <%= locals.errors && errors.email ? 'is-invalid' : null %> clave" 
               id="exampleInputPassword1"
               name="clave"
               value = "<%=   locals.oldData ? oldData.email : null %>">
