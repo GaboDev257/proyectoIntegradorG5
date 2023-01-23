@@ -13,7 +13,7 @@ class Products extends Component {
 
 
     componentDidMount(){
-        fetch("http://localhost:3001/api/productsAll", { method: "POST"} )
+        fetch("http://localhost:3001/api/products/index", { method: "GET"} )
                 .then(response => response.json())
                 .then(data => {
                         

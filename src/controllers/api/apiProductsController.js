@@ -6,7 +6,7 @@ const path = require('path');
 
 
 module.exports = {
-    productsAll: (req, res) => {
+    index: (req, res) => {
         product.findAll({ order: ['id'], include: 'category' })
             .then(products => {
                 if (products) {
@@ -31,7 +31,7 @@ module.exports = {
     },
 
     lastProduct: (req, res) => {
-        db.product.findAll({ order: [['id', 'DESC']], limit: [1], raw: true }) //, nest: true, include: 'category' 
+        product.findAll({ order: [['id', 'DESC']], limit: [1], raw: true }) //, nest: true, include: 'category' 
             .then(products => {
                 let appPath = 'http://localhost:3001/img/products/'
                 let imageURL = appPath + products[0].image;

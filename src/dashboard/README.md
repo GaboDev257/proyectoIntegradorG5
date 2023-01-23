@@ -1,11 +1,7 @@
-<p align="center">
-  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/home/marca_curvas.png" alt="Logo de la marca"/>
-</p>
-
 # **Grupo 5 "Weasleys Wizard Wheezes"**
 
 Proyecto integrador de Curso Full Stack de "Digital House". 
-Dashboard realizado en React para ser utilizado en conjunto con el sitio web alojado en <a href="https://github.com/Random003/grupo_1_6pimientas">esta</a> dirección.
+Dashboard realizado en React para ser utilizado en conjunto con el sitio web alojado en <a href="https://github.com/GaboDev257/proyectoIntegradorG5.git">esta</a> dirección.
 
 
 # **Instrucciones para inicializar el Dashboard:**
