@@ -1,0 +1,24 @@
+
+.bgcat { 
+    background-color:rgb(163, 31, 53);
+    border-radius: 10px;
+}
+.color-pp {
+    background-color:rgb(163, 31, 53);
+    background-image: linear-gradient(180deg,rgb(163, 31, 53) 10%,rgb(95, 17, 30) 100%);
+
+}
+
+.color-nav-bar {
+    
+    background-color: #FCF8C2;
+
+}
+
+.color-back-pp {
+    background-color: blanchedalmond; 
+}
+
+.title-sp {
+    color: #FF6565;
+}

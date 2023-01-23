@@ -1,6 +1,6 @@
 const path = require('path');
 const db = require('../database/models');
-const { validationResult } = require('express-validator')
+//const { validationResult } = require('express-validator')
 
 const Products = db.product;
 const Categories = db.category;
@@ -10,7 +10,7 @@ const controller = {
 	// Show all products
 	index: (req, res) => {
         db.product.findAll({
-            include: ['category']
+            include: ['category'],
         })
             .then(product => {
                 res.render('products/products.ejs', {productos:product})

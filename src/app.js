@@ -2,6 +2,8 @@ const usersRouter = require ('./routes/users')
 const productsRouter = require ('./routes/products')
 const homeRoutes = require('./routes/homeRoutes');
 const carritoRoutes = require ('./routes/carritoRoutes');
+const apiProductsRouter = require('./routes/api/apiProductsRouter');
+
 
 
 const express = require('express');
@@ -20,9 +22,10 @@ app.use('/', homeRoutes);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/shoppingCart', carritoRoutes);
+app.use('/api/products', apiProductsRouter);
 
 
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3001, function() {
     console.log('Servidor corriendo')
 });
