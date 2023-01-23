@@ -5,6 +5,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const { body } = require('express-validator');
+const {User} = require('../database/models/user');
 
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
@@ -25,7 +26,7 @@ const validations = [
     body('email')
        .notEmpty().withMessage('Tienes que escribir un correo electronico')
        .isEmail().withMessage('El formato de correo ingresado es inváido'),
-    body('contraseña')
+    body('clave')
        .notEmpty().withMessage('Tienes que escribir una contraseña')
        .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
     body('confirmpassword')
