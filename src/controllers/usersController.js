@@ -15,7 +15,7 @@ const controlador = {
 
     validationLogin :(req,res) => {
         const resultValidation = validationResult(req);
-        console.log(resultValidation.mapped())
+        // console.log(resultValidation.mapped())
  
         if (resultValidation.errors.length > 0)  {
          return res.render('users/login',{
@@ -41,7 +41,7 @@ const controlador = {
 
     processRegister:(req,res) => {
        const resultValidation = validationResult(req);
-       console.log(resultValidation.mapped());
+    //    console.log(resultValidation.mapped());
 
        if (resultValidation.errors.length > 0)  {
         return res.render('users/register',{

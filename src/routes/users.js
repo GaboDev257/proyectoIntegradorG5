@@ -26,19 +26,24 @@ const validations = [
     body('email')
        .notEmpty().withMessage('Tienes que escribir un correo electronico')
        .isEmail().withMessage('El formato de correo ingresado es inváido'),
-    body('clave')
+    body('password')
        .notEmpty().withMessage('Tienes que escribir una contraseña')
        .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
     body('confirmpassword')
        .notEmpty().withMessage('Tienes que confirmar la contraseña')
-       .custom ((value,{req}) => {
-          if (value != locals.password ) {
-            return Promise.reject ('Las contraseñas no coinciden')
-          }
-        return true;
+       .custom((value, { req }) => {
+        // console.log(value);
+        // console.log(req.body);
+        if(value === req.body.password){
+        return true
+        }else{
+        return false
+        }
+    })
+    .withMessage('Las contraseñas no coinciden')
 
-       }),
 ];
+
 
 const validations2 = [
     body('email')

@@ -11,6 +11,7 @@ const app = express();
 
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
+app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
@@ -23,6 +24,6 @@ app.use('/shoppingCart', carritoRoutes);
 
 
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3001, function() {
     console.log('Servidor corriendo')
 });
