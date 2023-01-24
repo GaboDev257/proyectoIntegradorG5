@@ -1,4 +1,4 @@
-const product = require('../../database/models');
+const db = require('../../database/models');
 const { Op } = require("sequelize")
 const fs = require('fs');
 const path = require('path');
@@ -6,8 +6,8 @@ const path = require('path');
 
 
 module.exports = {
-    index: (req, res) => {
-        product.findAll({ order: ['id'], include: 'category' })
+    allProducts: (req, res) => {
+        db.product.findAll({ order: ['id'], include: 'category' })
             .then(products => {
                 if (products) {
                     res.status(200).json(
@@ -31,7 +31,7 @@ module.exports = {
     },
 
     lastProduct: (req, res) => {
-        product.findAll({ order: [['id', 'DESC']], limit: [1], raw: true }) //, nest: true, include: 'category' 
+        db.product.findAll({ order: [['id', 'DESC']], limit: [1], raw: true }) //, nest: true, include: 'category' 
             .then(products => {
                 let appPath = 'http://localhost:3001/img/products/'
                 let imageURL = appPath + products[0].image;
