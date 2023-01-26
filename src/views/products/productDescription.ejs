@@ -13,7 +13,7 @@
 			<div class="row">
 				<div class="row col-lg-6 align-items-center text-center">
 					<div class="col">
-						<img src="/img/products/<%=detalleProducto.image %>" alt="product image" class="img-fluid" width="300" height="300">
+						<img src="/img/products/<%=detalleProducto.image %>" alt="product image" class="img-fluid imgprod" width="300" height="300">
 					</div> 
 				</div>
 				<div class="col-12 col-lg-6">
@@ -28,7 +28,7 @@
 							</p>
 						</div>	
 						<div class="divbutton">
-							<button type="button" class="btn buttoncart">Agregar al carrito</button>
+							<button type="button" class="btn buttoncart agregarboton">Agregar al carrito</button>
 						</div>
 						<div class="divbuttons">
 							<a href="/products/edit/<%=detalleProducto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
@@ -46,5 +46,7 @@
 	<!-- footer -->
 	<%- include('../partials/footer') %>
 	<!-- /footer -->
+	
+	<script src = "/js/carrito.js" > </script>
 </body>	
 </html>

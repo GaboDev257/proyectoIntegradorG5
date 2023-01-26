@@ -59,6 +59,7 @@ const validations2 = [
 /*** LOGIN USER ***/
 router.get('/login', usersController.login)
 router.post('/login', validations2 ,usersController.validationLogin)
+router.post('/login', usersController.validationLogin)
 
 
 /*** CREATE ONE USER ***/ 

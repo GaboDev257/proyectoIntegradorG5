@@ -10,63 +10,47 @@
 <div id="titulo"><h3 class="titulo1"> Mi carrito </h3></div>
 
 
-<div class="divA"> 
- <div class="imagen1"> <img src="/img/bombones.png" alt="bombones" width="170px" height="170px"> </div>
+<div class="divA carritodiv car-items"  > 
+ <div class="imagen1"> <img src="/img/products/Slytherin-Dark-Chocolate-Bar.png" alt="bombones" width="170px" height="170px"> </div>
 
- <div class="div1">
-      <h4 class="titulofoto fuente1"> Barra de oro Gringots de chocolate con leche</h4>
+ <div class="div1 cart-row">
+      <h4 class="titulofoto fuente1"> Barra de chocolate Slytherin</h4>
 
-      <p class="precio fuente2" > Precio $250 </p>
+      <span class="precio fuente2" > $ 120 </span>
 
        <label for="unidades" class="cant">Cantidad:</label>
-           <select name="Cantidad" id="cantidad">
-             <option value="uno">0</option>
-              <option value="uno">1</option>
-              <option value="dos">2</option>
-              <option value="tres">3</option>
-              <option value="cuatro">4</option>
-              <option value="cinco">5</option>
-              <option value="seis">6</option>
-              <option value="siete">7</option>
-              <option value="ocho">8</option>
-              <option value="nueve">9</option>
-              <option value="diez">10</option>
-            </select>
-     <h3 class="subtotal fuente2 sub">Subtotal $250</h3>
+       <input class="cantidad cnt" type="number" value="0">
+
+
+    <button type="submit" class= "deletebutton" id="deletebutton">Eliminar</button>
+    <br>
+
  </div>
 
 </div>
 
 
 
-<div class="divB"> 
-  <div class="imagen2"> <img src="/img/chocolate1.png" alt="bombones" width="170px" height="170px"></div>
+<div class="divB carritodiv" > 
+  <div class="imagen2"> <img src="/img/products/Dark-Chocolate-Frog-with-authentic-film-packaging.png" alt="bombones" width="170px" height="170px"></div>
  
-  <div class="div2">
-       <h4 class="titulofoto fuente1"> Barra de oro Gringots de chocolate con leche</h4>
+  <div class="div2 cart-row">
+       <h4 class="titulofoto fuente1"> Rana de Chocolate </h4>
  
-       <p class="precio fuente2"> Precio $250 </p>
+       <p class="precio fuente2"> $190 </p>
  
         <label for="unidades" class="cant">Cantidad:</label>
-            <select name="Cantidad" id="cantidad">
-               <option value="uno">0</option>
-               <option value="uno">1</option>
-               <option value="dos">2</option>
-               <option value="tres">3</option>
-               <option value="cuatro">4</option>
-               <option value="cinco">5</option>
-               <option value="seis">6</option>
-               <option value="siete">7</option>
-               <option value="ocho">8</option>
-               <option value="nueve">9</option>
-               <option value="diez">10</option>
-             </select>
-      <h3 class="subtotal fuente2 sub">Subtotal $250</h3>
+        <input class="cantidad cnt" type="number" value="0">
+
+    
+      <button type="submit" class= "deletebutton" id="deletebutton">Eliminar</button>
+      <br>
   </div>
  </div>
+
 <br>
 
- <h4 class="total">Total $500</h4>
+ <h4 class="total">Total $0</h4>
  
 <br>
 
@@ -78,6 +62,7 @@
 
 <!-- FOOTER -->
 <%- include('partials/footer.ejs') %>
+<script src = "/js/carrito.js" > </script>
 
 </body>
 

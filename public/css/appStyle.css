@@ -108,7 +108,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 170px;
+    height: 260px;
     width: 55%;
     background-color: #FCF8C2;
     opacity: 0.6;
@@ -135,7 +135,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 170px;
+    height: 260px;
     width: 55%;
     background-color: #FCF8C2;
     opacity: 0.6;
@@ -222,6 +222,35 @@
     padding-right: 20px;
     padding-top: 5px;
 
+}
+.deletebutton{
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  width: 90px;
+  background-color: white;
+  color: #FF6565;
+  font-family: verdana;
+  border-color: #FF6565;
+  border-radius: 10px;
+  transition: all .5s ease;
+  text-align: center;
+  line-height: 1;
+  padding: 10px;
+  outline: none;
+  
+}
+.deletebutton:hover {
+  color: white;
+  background-color: #FF6565;
+}
+.cantidad{
+  font-size: large;
+  font-weight: 600;
+  width: 50px;
+  font-family: verdana;
+  color: #940606;
+  text-align: center;
 }
 
 /*====== Formularios ======*/
