@@ -39,7 +39,7 @@ const controlador = {
         .catch(error => res.send(error));
 	},
 
-    processRegister:(req,res) => {
+    processRegister:(req,res, next) => {
        const resultValidation = validationResult(req);
     //    console.log(resultValidation.mapped());
 
@@ -53,7 +53,9 @@ const controlador = {
 
      }, 
 
-    
+    processLogin: (req, res, next) => {
+
+    },
 
     // Create -  Method to store
     store: (req,res) => {
