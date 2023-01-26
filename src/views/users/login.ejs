@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/normalize.css">
+
+
 </head>
 <body>
   <div class="contenedor-padre">
@@ -21,15 +23,61 @@
       <div class="contenedor-logo">
         <a href="/" ><img src="/img/company-logo.png"></a>
       </div>
+<br>
+<br>
+    <div class="errores">
+        <ul   id="ulerrores"> 
+
+        </ul> 
+    
+      </div>       
+
+
       <div class="contenedor-form">          
-        <form>
+        <form action="/users/login" method="POST" id="formulario" >
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"><strong>Email</strong></label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                    <div id="emailHelp" class="form-text"></div>
+            <input 
+               class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> email" 
+               id="exampleInputEmail1" 
+               name="email"
+               aria-describedby="emailHelp"                    
+               value = "<%=   locals.oldData ? oldData.email : null %>">
+               
+               <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                 <%= errors.email.msg %>
+                </div>
+
+               <%  }  %> 
+
+               <div id="emailHelp" class="form-text"></div>
+          
+          
+          
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"><strong>Contraseña</strong></label>
-            <input type="password"  class="form-control" id="exampleInputPassword1">
+            <input 
+              type="password"  
+              class="form-control  <%= locals.errors && errors.email ? 'is-invalid' : null %> clave" 
+              id="exampleInputPassword1"
+              name="clave"
+             >
+             
+              <% if (locals.errors && errors.clave) { %>
+                <div class="text-danger">
+                 <%= errors.clave.msg %>
+                </div>
+
+              <%  }  %> 
+
+               <div id="emailHelp" class="form-text"></div>
+
+
+
+
+
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -50,6 +98,8 @@
   </div>
 
 <!-- JavaScript Bundle with Popper -->
+<script src = "/js/validacionesJSfrontlogin.js" > </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </body>
 </html>
