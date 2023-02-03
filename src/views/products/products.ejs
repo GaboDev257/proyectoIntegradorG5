@@ -25,6 +25,11 @@
                         </div>
                         <div id="price-home">
                           <p>$ <%= productos[i].price %></p>
+                          <button type="button" data-product=
+                          '{"id": <%= productos[i].id %>, 
+                          "name": "<%= productos[i].name %>", 
+                          "price": <%= productos[i].price %>}' 
+                          class="carrito btn buttoncart agregarboton">Agregar al carrito</button>
                         </div>
                       </div>
                     </div>

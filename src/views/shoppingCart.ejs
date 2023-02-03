@@ -6,11 +6,12 @@
 <body>
   <!-- Header -->
   <%- include('partials/topNavbar.ejs') %>
-
 <div id="titulo"><h3 class="titulo1"> Mi carrito </h3></div>
 
+<div id="contenedor-carrito"></div>
 
-<div class="divA carritodiv car-items"  > 
+
+<!-- <div class="divA carritodiv car-items"  > 
  <div class="imagen1"> <img src="/img/products/Slytherin-Dark-Chocolate-Bar.png" alt="bombones" width="170px" height="170px"> </div>
 
  <div class="div1 cart-row">
@@ -50,12 +51,14 @@
 
 <br>
 
- <h4 class="total">Total $0</h4>
+ <h4 class="total">Total $0</h4> -->
  
 <br>
 
 <div id="botones"> 
-  <button type="button" class="bot1">Seguir Comprando</button>
+  
+  <button type="button" class="bot1 vaciarcarrito">Vaciar Carrito</button>
+  <button type="button" class="bot1 seguirCompra">Seguir Comprando</button>
   <button type="button" class="bot2">Finalizar Compra</button>
 
 </div>
