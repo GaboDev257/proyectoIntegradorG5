@@ -15,19 +15,27 @@
                         <h5>Más vendidos</h5>
                       </div>                      
                       <div>
-                          <% for (let i=0;i<productos.length;i++) { %> <% if (productos[i].category.id == '100') { %> 
+                        <% for (let i=0;i<productos.length;i++) { %> <% if (productos[i].category.id == '100') { %>  
                         <div class="text-center my-4">
                           <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="imagen de producto"></a>
                         </div>
                         <div id="text-name" >
-                          <p><%= productos[i].name %></p>
+                          <p class="productName"><%= productos[i].name %></p>
                         </div>
                         <div id="price-home">
-                          <p>$ <%= productos[i].price %></p>
+                          <p class="productPrice">$ <%= productos[i].price %></p>
+                          <button type="button" data-product=
+                            '{"id": <%= productos[i].id %>, 
+                            "name": "<%= productos[i].name %>", 
+                            "price": <%= productos[i].price %>}' 
+                            class="carrito btn buttoncart agregarboton">Agregar al carrito</button>
                         </div>
                         <% } %> <% } %> 
                       </div>
+
                       <div class="d-flex justify-content-center"><a href="/products">
+                        <br> 
+
                         <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button></a>
                       </div>                       
                     </div>                        
@@ -43,13 +51,19 @@
                           <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="imagen de producto"></a>
                         </div> 
                         <div id="text-name" >
-                          <p><%= productos[i].name %></p>
+                          <p class="productName"><%= productos[i].name %></p>
                         </div>
                         <div id="price-home">
-                          <p>$ <%= productos[i].price %></p>
+                          <p class="productPrice">$ <%= productos[i].price %></p>
+                          <button type="button" data-product=
+                            '{"id": <%= productos[i].id %>, 
+                            "name": "<%= productos[i].name %>", 
+                            "price": <%= productos[i].price %>}' 
+                            class="carrito btn buttoncart agregarboton">Agregar al carrito</button>
                         </div>
                         <% } %> <% } %> 
                       </div>
+                      <br>
                         <div class="d-flex justify-content-center"><a href="/products">
                           <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button></a>
                         </div>                         
@@ -66,13 +80,20 @@
                           <a href="/products/detail/<%= productos[i].id  %>"><img class="img-fluid" width="160" height="160" src="/img/products/<%= productos[i].image  %>" alt="imagen de producto"></a>
                         </div>
                         <div id="text-name" >
-                          <p><%= productos[i].name %></p>
+                          <p class="productName"><%= productos[i].name %></p>
                         </div>
                         <div id="price-home">
-                          <p>$ <%= productos[i].price %></p>
+                          <p class="productPrice">$ <%= productos[i].price %></p>
+                          <button type="button" data-product=
+                            '{"id": <%= productos[i].id %>, 
+                            "name": "<%= productos[i].name %>", 
+                            "price": <%= productos[i].price %>}' 
+                            class="carrito btn buttoncart agregarboton">Agregar al carrito</button>
+
                         </div>
                         <% } %> <% } %> 
                       </div>
+                      <br>
                         <div class="d-flex justify-content-center"><a href="/products">
                           <button type="button" class="btn btn-primary" id="btn-standard">Ver más</button></a>
                         </div> 
@@ -83,5 +104,6 @@
         </div>
         <!-- FOOTER -->
         <%- include('partials/footer.ejs') %>
+        <script src = "/js/carrito.js" > </script>
 </body>
 </html>
