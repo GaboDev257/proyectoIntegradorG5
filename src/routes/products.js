@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const { check } = require('express-validator');
+//const { check } = require('express-validator');
 
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
@@ -16,15 +16,7 @@ const multerDiskStorage = multer.diskStorage({
 });
 
 const uploadFile = multer({ storage: multerDiskStorage });
-
-
-let validaciones = [
-	check('name').notEmpty().withMessage('Complete campo'),
-    check('name').notEmpty().withMessage('Complete campo')
-];  
-
-
-
+ 
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
@@ -34,7 +26,7 @@ router.get('/', productsController.index);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/create', uploadFile.single('imagenProducto'),validaciones, productsController.store); 
+router.post('/create', uploadFile.single('imagenProducto'), productsController.store); 
 
 
 /*** GET ONE PRODUCT ***/ 

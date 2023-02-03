@@ -6,6 +6,10 @@ const controlador = {
 
     res.render( './shoppingCart.ejs')
   },
+  carritoProducto: async (req, res) => {
+    let prodCarrito = await apiServices.productByPk(req);
+    res.json(prodCarrito);
+  }
 
 }
 
